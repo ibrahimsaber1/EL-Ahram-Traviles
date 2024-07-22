@@ -209,22 +209,52 @@ input{
     margin-top: 50px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .one_room{
     width: 30%;
-    height: 350px;
+    height: auto;
     background-color: white;
-    margin: 2%;
+    margin: 1.5%;
+    
 }
 
 .room-image{
     width: 100%;
     height: 190px;
-    background-color: aqua;
+    /* background-color: aqua; */
     overflow: hidden;
 }
 
 .r_image{
     width: 100%;
+}
+
+.img-5{
+    margin-top: -100px;
+
+}
+
+.room-detalis{
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    grid-auto-rows: 5px;
+}
+
+.room-detalis p{
+    font-size: 0.25rm;
+}
+
+.room-btn{
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    padding: 5px 10px;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
 }
