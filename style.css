@@ -193,6 +193,27 @@ input{
     padding: 50px 15%;
     background-color: rgb(83, 83, 83);
     font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.roomsTitle{
+    font-size: 2em;
+}
 
+.rooms_area{
+    width: 100%;
+    padding: 20px 0px;
+    background-color: red;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+.one_room{
+    width: 30%;
+    height: 400px;
+    background-color: white;
+    margin: 2%;
 }
