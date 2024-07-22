@@ -191,7 +191,7 @@ input{
 .rooms{
     width: 100%;
     padding: 50px 15%;
-    background-color: rgb(83, 83, 83);
+    background-color: #f3f3f3;
     font-family: "Poppins", sans-serif;
     display: flex;
     flex-direction: column;
@@ -205,19 +205,19 @@ input{
 .rooms_area{
     width: 100%;
     padding: 20px 0px;
-    background-color: red;
+    /* background-color: red; */
     margin-top: 50px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    column-gap: 5%;
+    row-gap: 55px;
 }
 
 .one_room{
     width: 30%;
     height: auto;
     background-color: white;
-    margin: 1.5%;
-    
 }
 
 .room-image{
@@ -241,7 +241,7 @@ input{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    grid-auto-rows: 5px;
+    row-gap: 10px;
 }
 
 .room-detalis p{
