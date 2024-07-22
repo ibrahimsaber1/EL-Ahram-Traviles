@@ -258,3 +258,37 @@ input{
     color: white;
     cursor: pointer;
 }
+
+/* subscrip section css */
+.subscrip{
+    width: 100%;
+    padding: 50px 15%;
+    background-color: red;
+}
+
+.sub-text{
+    width: 30%;
+    padding: 15px;
+    background-color: #00dcfc;
+}
+
+.sub_logo{
+    width: 50%;
+    height: 60px;
+}
+
+
+.sub_logo_text{
+width: 80%;
+color: rgb(253, 249, 242);
+background-color: black;
+text-align: center;
+font-family: "Poppins", sans-serif;
+font-weight: 500 ;
+
+}
+
+.sub-desc{
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+}
