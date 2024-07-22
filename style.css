@@ -1,0 +1,161 @@
+/* installing the font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+/*   */
+
+/* the general stiles --------------------*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* the banner styling --------------------*/
+.banner{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 95vh;
+    background-color: gray;
+    background-image: url('./images/banner.jpg');
+    background-size: cover ;  /*to have the full picture*/
+}
+
+.banner_header{
+    width: 100%;
+    height: 70px;
+    /* background-color: rgba(246, 250, 44, 0.5); */
+    padding: 0 15%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    
+}
+
+.banner_logo{
+    width: 15%;
+    height: 70px;
+    /* background-color: rgb(255, 255, 0,0.8); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.banner_logo_text{
+    width: 80%;
+    color: rgb(253, 249, 242);
+    background-color: black;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500 ;
+
+}
+
+.banner_nav{
+    width: 45%;
+    height: 70px;
+    /* background-color: rgb(68, 0, 255,0.8); */
+    
+}
+
+.nav_links{
+    width: 100%;
+    height: 100%;
+    /* background-color: yellow; */
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.nav_link{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500 ;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.nav_link:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/*-----------banner detailes styles :)-----------*/
+.banner_detailse{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* background-color: aliceblue; */
+    padding: 20px 15%;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.banner_detailse_badge{
+    width: max-content;
+    background-color: rgb(243, 241, 241,0.5);
+    font-family: "Poppins", sans-serif;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.banner_detailse_badge:hover{
+    background-color: rgb(243, 241, 241);
+    cursor: pointer;
+}
+
+.banner-detalies-heading{
+    font-family: "Poppins", sans-serif;
+    font-size: 55PX;
+    color: white;
+}
+
+.banner-detailse-btn{
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    padding: 15px 30px;
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+    cursor: pointer;
+}
+
+.banner-detalies-booking{
+    margin-top: 30px;
+    width: 100%;
+    background-color: rgb(255, 255, 255,0.5);
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 8px;
+}
+
+.booking-inp{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    row-gap: 5px;
+}
+
+input{
+    height: 30px;
+    text-indent: 5px;
+    font-size: 15px;
+}
+.booking-inp-button{
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    padding: 18px 50px;
+    background-color: black;
+    border: 1px solid black;
+    /* border-radius: 50px; */
+    color: white;
+    cursor: pointer;
+}
