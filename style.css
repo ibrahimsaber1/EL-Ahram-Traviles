@@ -213,7 +213,18 @@ input{
 
 .one_room{
     width: 30%;
-    height: 400px;
+    height: 350px;
     background-color: white;
     margin: 2%;
+}
+
+.room-image{
+    width: 100%;
+    height: 190px;
+    background-color: aqua;
+    overflow: hidden;
+}
+
+.r_image{
+    width: 100%;
 }
