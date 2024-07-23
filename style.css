@@ -419,3 +419,22 @@ font-weight: 500 ;
     display: flex;
     flex-direction: column;
 }
+
+/* gallery section */
+
+.gallery{
+    width: 100%;
+    padding: 50px 15%;
+    background-color: black;
+}
+
+.gal-img{
+    width: 33%;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.gal-img:hover{
+    cursor: pointer;
+    opacity: 1;
+
+}
