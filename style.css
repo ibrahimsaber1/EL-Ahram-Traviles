@@ -454,25 +454,48 @@ font-weight: 500 ;
     display: flex;
     flex-direction: row;
     font-family: "Poppins", sans-serif;
+    justify-content: space-between ;
 
 }
 
 .footer-info{
-    width: 30%;
+    width: 45%;
     height: 350px;
     padding: 10px;
     color: white;
-    background-color: #2ac0d4;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    /* background-color: #2ac0d4; */
 
 }
 
 .plane-logo{
-    font-size: 40px;
-    color: #ff4a52;
+    font-size: 50px;
+    color: #ffffff;
 }
 
 .footer-contact{
-    width: 30%;
+    width: 45%;
     height: 350px;
+    padding: 10px;
+    color: white;
     background-color: rebeccapurple;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.pcontact{
+    display: flex;
+    column-gap: 10px;
+}
+
+.logo-1{
+    margin-top: 2.5px;
+    font-size: 25px;
+}
+
+.pcontact h3{
+    font-weight: 300;
 }
