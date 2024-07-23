@@ -503,8 +503,7 @@ font-weight: 500 ;
 .media-logos{
     width: 100%;
     height: 80px;
-    padding: 10px;
-    /* background-color: red; */
+    padding: 10px;  
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -512,6 +511,10 @@ font-weight: 500 ;
 }
 
 .logo-2{
-
     font-size: 35px;
+}
+
+.logo-2:hover{
+    cursor: pointer;
+    transform: scale(1.5);
 }
