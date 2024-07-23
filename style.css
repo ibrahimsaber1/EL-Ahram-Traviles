@@ -377,7 +377,7 @@ font-weight: 500 ;
     width: 100%;
     padding: 50px 15%;
     font-family: "Poppins", sans-serif;
-    background-color: red;
+    /* background-color: red; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -386,6 +386,37 @@ font-weight: 500 ;
 .pre-rooms{
     width: 100%;
     height: 800px;
-    background-color: #00dcfc;
+    /* background-color: #00dcfc; */
     margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.prem-img{
+    width: 30%;
+    height: 800px;
+    /* background-color: aquamarine; */
+}
+
+.prem-boxes{
+    width: 65%;
+    height: 800px;
+    /* background-color: rgb(11, 97, 68); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.pre-vimg{
+    width: 100%;
+    height: inherit;
+}
+
+.proom-box{
+    width: 100%;
+    padding: 20px;
+    /* background-color: gold; */
+    display: flex;
+    flex-direction: column;
 }
