@@ -431,16 +431,24 @@ font-weight: 500 ;
 .gallery{
     width: 100%;
     padding: 50px 15%;
-    background-color: black;
+    background-color: #ebebeb;
 }
 
 .gal-img{
     width: 33%;
-    opacity: 0.5 !important;
+    opacity: 0.7 !important;
     transition: 0.5s;
 }
 .gal-img:hover{
     cursor: pointer;
     opacity: 1 !important;
 
+}
+
+/* footer section css */
+
+.footer{
+    width: 100%;
+    padding: 50px 15%;
+    background-color: #8f0000;
 }
