@@ -377,7 +377,7 @@ font-weight: 500 ;
     width: 100%;
     padding: 50px 15%;
     font-family: "Poppins", sans-serif;
-    /* background-color: red; */
+    background-color: #ebebeb;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -386,7 +386,6 @@ font-weight: 500 ;
 .pre-rooms{
     width: 100%;
     height: 800px;
-    /* background-color: #00dcfc; */
     margin-top: 50px;
     display: flex;
     flex-direction: row;
@@ -405,7 +404,7 @@ font-weight: 500 ;
     /* background-color: rgb(11, 97, 68); */
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .pre-vimg{
@@ -416,7 +415,7 @@ font-weight: 500 ;
 .proom-box{
     width: 100%;
     padding: 20px;
-    /* background-color: gold; */
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
 }
