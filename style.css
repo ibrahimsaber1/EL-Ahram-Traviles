@@ -374,5 +374,18 @@ font-weight: 500 ;
 /* premium rooms css */
 
 .premium{
-    
+    width: 100%;
+    padding: 50px 15%;
+    font-family: "Poppins", sans-serif;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pre-rooms{
+    width: 100%;
+    height: 800px;
+    background-color: #00dcfc;
+    margin-top: 50px;
 }
