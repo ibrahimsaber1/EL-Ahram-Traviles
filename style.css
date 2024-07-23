@@ -436,11 +436,11 @@ font-weight: 500 ;
 
 .gal-img{
     width: 33%;
-    opacity: 0.5;
+    opacity: 0.5 !important;
     transition: 0.5s;
 }
 .gal-img:hover{
     cursor: pointer;
-    opacity: 1;
+    opacity: 1 !important;
 
 }
