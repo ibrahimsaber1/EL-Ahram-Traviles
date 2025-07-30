@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms - EL Ahram Travels</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./pages.css">
+    <link rel="stylesheet" href="./rooms.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header class="page-header">
+        <div class="page-header-content">
+            <div class="page-logo">
+                <a href="../index.html">
+                    <p class="banner_logo_text">EL Ahram</p>
+                    <p class="banner_logo_text">Travels</p>
+                </a>
+            </div>
+            <nav class="page-nav">
+                <ul class="page-nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="auth-active"><a href="./rooms.html">Rooms</a></li>
+                    <li><a href="./hotels.html">Hotels</a></li>
+                    <li><a href="../index.html#gallery">Gallery</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="./login.html">Login</a></li>
+                    <li><a href="./register.html">Register</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <div class="mobile-logo">
+                    <p>EL Ahram</p>
+                    <p>Travels</p>
+                </div>
+                <button class="close-menu" id="closeMenu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <ul class="mobile-nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./rooms.html">Rooms</a></li>
+                    <li><a href="./hotels.html">Hotels</a></li>
+                    <li><a href="../index.html#gallery">Gallery</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="./login.html">Login</a></li>
+                    <li><a href="./register.html">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Rooms Hero Section -->
+    <section class="rooms-hero">
+        <div class="rooms-hero-content">
+            <h1 data-aos="fade-up">Luxury Accommodations</h1>
+            <p data-aos="fade-up" data-aos-delay="200">Discover our exquisite collection of rooms and suites, each designed to provide the ultimate comfort and unforgettable experiences</p>
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
+                <div class="stat">
+                    <h3>100+</h3>
+                    <p>Premium Rooms</p>
+                </div>
+                <div class="stat">
+                    <h3>4.9★</h3>
+                    <p>Average Rating</p>
+                </div>
+                <div class="stat">
+                    <h3>24/7</h3>
+                    <p>Concierge Service</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Room Filters -->
+    <section class="rooms-filters">
+        <div class="filters-container">
+            <div class="filter-group">
+                <label>Room Type</label>
+                <select id="roomType">
+                    <option value="">All Room Types</option>
+                    <option value="deluxe">Deluxe Rooms</option>
+                    <option value="suite">Suites</option>
+                    <option value="villa">Villas</option>
+                    <option value="penthouse">Penthouses</option>
+                    <option value="standard">Standard Rooms</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label>Price Range</label>
+                <select id="priceRange">
+                    <option value="">Any Price</option>
+                    <option value="0-200">$0 - $200</option>
+                    <option value="200-400">$200 - $400</option>
+                    <option value="400-600">$400 - $600</option>
+                    <option value="600+">$600+</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label>Capacity</label>
+                <select id="capacity">
+                    <option value="">Any Capacity</option>
+                    <option value="1">1 Guest</option>
+                    <option value="2">2 Guests</option>
+                    <option value="4">Up to 4 Guests</option>
+                    <option value="6">6+ Guests</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label>View Type</label>
+                <select id="viewType">
+                    <option value="">All Views</option>
+                    <option value="sea">Sea View</option>
+                    <option value="mountain">Mountain View</option>
+                    <option value="garden">Garden View</option>
+                    <option value="city">City View</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label>Special Features</label>
+                <select id="features">
+                    <option value="">All Features</option>
+                    <option value="pool">Private Pool</option>
+                    <option value="jacuzzi">Jacuzzi</option>
+                    <option value="balcony">Balcony</option>
+                    <option value="kitchen">Kitchenette</option>
+                    <option value="fireplace">Fireplace</option>
+                </select>
+            </div>
+            
+            <button class="filter-btn" id="applyFilters">Apply Filters</button>
+            <button class="filter-btn" id="clearFilters" style="background: #6c757d;">Clear All</button>
+        </div>
+    </section>
+
+    <!-- Room Categories -->
+    <section class="room-categories">
+        <div class="container">
+            <h2 data-aos="fade-up">Room Categories</h2>
+            <p data-aos="fade-up" data-aos-delay="200">Choose from our diverse range of accommodation options</p>
+            
+            <div class="categories-grid">
+                <div class="category-card" data-aos="fade-up" data-aos-delay="100" data-category="standard">
+                    <div class="category-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <h3>Standard Rooms</h3>
+                    <p>Comfortable and well-appointed rooms perfect for business travelers and couples</p>
+                    <div class="category-price">From $150/night</div>
+                    <button class="category-btn" onclick="filterByCategory('standard')">View Rooms</button>
+                </div>
+
+                <div class="category-card" data-aos="fade-up" data-aos-delay="200" data-category="deluxe">
+                    <div class="category-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>Deluxe Rooms</h3>
+                    <p>Spacious rooms with premium amenities and stunning views of the Mediterranean</p>
+                    <div class="category-price">From $300/night</div>
+                    <button class="category-btn" onclick="filterByCategory('deluxe')">View Rooms</button>
+                </div>
+
+                <div class="category-card" data-aos="fade-up" data-aos-delay="300" data-category="suite">
+                    <div class="category-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Luxury Suites</h3>
+                    <p>Expansive suites featuring separate living areas and exclusive concierge services</p>
+                    <div class="category-price">From $450/night</div>
+                    <button class="category-btn" onclick="filterByCategory('suite')">View Rooms</button>
+                </div>
+
+                <div class="category-card" data-aos="fade-up" data-aos-delay="400" data-category="villa">
+                    <div class="category-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Private Villas</h3>
+                    <p>Exclusive villas with private pools, gardens, and personalized butler service</p>
+                    <div class="category-price">From $800/night</div>
+                    <button class="category-btn" onclick="filterByCategory('villa')">View Rooms</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Grid -->
+    <section class="rooms-grid">
+        <div class="rooms-container">
+            <div class="rooms-header">
+                <h2>Available Rooms</h2>
+                <div class="sort-options">
+                    <label for="sortBy">Sort by:</label>
+                    <select id="sortBy">
+                        <option value="recommended">Recommended</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Guest Rating</option>
+                        <option value="size">Room Size</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="rooms-list" id="roomsList">
+                <!-- Room Item 1 -->
+                <div class="room-item" data-aos="fade-up" data-type="deluxe" data-price="350" data-capacity="2" data-view="sea" data-features="balcony">
+                    <div class="room-image">
+                        <img src="../images/room1.jpg" alt="Deluxe Sea View Suite">
+                        <div class="room-badge premium">Premium</div>
+                        <div class="room-gallery-btn" onclick="openGallery('deluxe-sea-suite')">
+                            <i class="fas fa-images"></i> View Gallery
+                        </div>
+                    </div>
+                    <div class="room-details">
+                        <div class="room-header">
+                            <h3>Deluxe Sea View Suite</h3>
+                            <div class="room-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-score">4.9</span>
+                                <span class="rating-count">(156 reviews)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="room-info">
+                            <div class="room-specs">
+                                <span><i class="fas fa-expand-arrows-alt"></i> 45 m²</span>
+                                <span><i class="fas fa-users"></i> 2 Guests</span>
+                                <span><i class="fas fa-eye"></i> Sea View</span>
+                                <span><i class="fas fa-bed"></i> King Bed</span>
+                            </div>
+                            
+                            <p class="room-description">
+                                Elegant suite featuring panoramic sea views, marble bathroom with soaking tub, 
+                                private balcony, and premium amenities for the ultimate luxury experience.
+                            </p>
+                            
+                            <div class="room-amenities">
+                                <span><i class="fas fa-wifi"></i> Free WiFi</span>
+                                <span><i class="fas fa-tv"></i> Smart TV</span>
+                                <span><i class="fas fa-snowflake"></i> A/C</span>
+                                <span><i class="fas fa-coffee"></i> Minibar</span>
+                                <span><i class="fas fa-bath"></i> Marble Bath</span>
+                                <span><i class="fas fa-balcony"></i> Balcony</span>
+                            </div>
+                        </div>
+                        
+                        <div class="room-footer">
+                            <div class="room-price">
+                                <span class="price-amount">$350</span>
+                                <span class="price-unit">per night</span>
+                                <span class="price-note">Taxes included</span>
+                            </div>
+                            <div class="room-actions">
+                                <button class="btn-secondary" onclick="viewRoomDetails('deluxe-sea-suite')">View Details</button>
+                                <button class="btn-primary">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room Item 2 -->
+                <div class="room-item" data-aos="fade-up" data-aos-delay="100" data-type="villa" data-price="520" data-capacity="6" data-view="sea" data-features="pool">
+                    <div class="room-image">
+                        <img src="../images/room2.jpg" alt="Private Villa with Pool">
+                        <div class="room-badge luxury">Luxury</div>
+                        <div class="room-gallery-btn" onclick="openGallery('private-villa-pool')">
+                            <i class="fas fa-images"></i> View Gallery
+                        </div>
+                    </div>
+                    <div class="room-details">
+                        <div class="room-header">
+                            <h3>Private Villa with Pool</h3>
+                            <div class="room-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-score">4.8</span>
+                                <span class="rating-count">(89 reviews)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="room-info">
+                            <div class="room-specs">
+                                <span><i class="fas fa-expand-arrows-alt"></i> 120 m²</span>
+                                <span><i class="fas fa-users"></i> 6 Guests</span>
+                                <span><i class="fas fa-eye"></i> Sea View</span>
+                                <span><i class="fas fa-bed"></i> 3 Bedrooms</span>
+                            </div>
+                            
+                            <p class="room-description">
+                                Exclusive three-bedroom villa with private infinity pool, outdoor dining area, 
+                                fully equipped kitchen, and dedicated butler service for the ultimate privacy.
+                            </p>
+                            
+                            <div class="room-amenities">
+                                <span><i class="fas fa-swimming-pool"></i> Private Pool</span>
+                                <span><i class="fas fa-utensils"></i> Full Kitchen</span>
+                                <span><i class="fas fa-user-tie"></i> Butler Service</span>
+                                <span><i class="fas fa-car"></i> Private Parking</span>
+                                <span><i class="fas fa-spa"></i> In-room Spa</span>
+                                <span><i class="fas fa-wine-glass"></i> Wine Cellar</span>
+                            </div>
+                        </div>
+                        
+                        <div class="room-footer">
+                            <div class="room-price">
+                                <span class="price-amount">$520</span>
+                                <span class="price-unit">per night</span>
+                                <span class="price-note">Taxes included</span>
+                            </div>
+                            <div class="room-actions">
+                                <button class="btn-secondary" onclick="viewRoomDetails('private-villa-pool')">View Details</button>
+                                <button class="btn-primary">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room Item 3 -->
+                <div class="room-item" data-aos="fade-up" data-aos-delay="200" data-type="suite" data-price="280" data-capacity="2" data-view="garden" data-features="jacuzzi">
+                    <div class="room-image">
+                        <img src="../images/room3.jpg" alt="Garden Suite with Jacuzzi">
+                        <div class="room-badge popular">Popular</div>
+                        <div class="room-gallery-btn" onclick="openGallery('garden-suite-jacuzzi')">
+                            <i class="fas fa-images"></i> View Gallery
+                        </div>
+                    </div>
+                    <div class="room-details">
+                        <div class="room-header">
+                            <h3>Garden Suite with Jacuzzi</h3>
+                            <div class="room-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-score">4.7</span>
+                                <span class="rating-count">(203 reviews)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="room-info">
+                            <div class="room-specs">
+                                <span><i class="fas fa-expand-arrows-alt"></i> 60 m²</span>
+                                <span><i class="fas fa-users"></i> 2 Guests</span>
+                                <span><i class="fas fa-eye"></i> Garden View</span>
+                                <span><i class="fas fa-bed"></i> Queen Bed</span>
+                            </div>
+                            
+                            <p class="room-description">
+                                Tranquil suite overlooking lush gardens, featuring a private outdoor jacuzzi, 
+                                separate sitting area, and premium bathroom amenities for a romantic getaway.
+                            </p>
+                            
+                            <div class="room-amenities">
+                                <span><i class="fas fa-hot-tub"></i> Private Jacuzzi</span>
+                                <span><i class="fas fa-leaf"></i> Garden View</span>
+                                <span><i class="fas fa-couch"></i> Sitting Area</span>
+                                <span><i class="fas fa-bath"></i> Rain Shower</span>
+                                <span><i class="fas fa-coffee"></i> Coffee Machine</span>
+                                <span><i class="fas fa-book"></i> Library</span>
+                            </div>
+                        </div>
+                        
+                        <div class="room-footer">
+                            <div class="room-price">
+                                <span class="price-amount">$280</span>
+                                <span class="price-unit">per night</span>
+                                <span class="price-note">Taxes included</span>
+                            </div>
+                            <div class="room-actions">
+                                <button class="btn-secondary" onclick="viewRoomDetails('garden-suite-jacuzzi')">View Details</button>
+                                <button class="btn-primary">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room Item 4 -->
+                <div class="room-item" data-aos="fade-up" data-aos-delay="300" data-type="standard" data-price="180" data-capacity="2" data-view="city" data-features="balcony">
+                    <div class="room-image">
+                        <img src="../images/room4.jpg" alt="Standard City View Room">
+                        <div class="room-badge budget">Great Value</div>
+                        <div class="room-gallery-btn" onclick="openGallery('standard-city-room')">
+                            <i class="fas fa-images"></i> View Gallery
+                        </div>
+                    </div>
+                    <div class="room-details">
+                        <div class="room-header">
+                            <h3>Standard City View Room</h3>
+                            <div class="room-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-score">4.5</span>
+                                <span class="rating-count">(324 reviews)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="room-info">
+                            <div class="room-specs">
+                                <span><i class="fas fa-expand-arrows-alt"></i> 30 m²</span>
+                                <span><i class="fas fa-users"></i> 2 Guests</span>
+                                <span><i class="fas fa-eye"></i> City View</span>
+                                <span><i class="fas fa-bed"></i> Double Bed</span>
+                            </div>
+                            
+                            <p class="room-description">
+                                Comfortable and well-appointed room with modern amenities, city views, 
+                                and convenient location perfect for business travelers and couples.
+                            </p>
+                            
+                            <div class="room-amenities">
+                                <span><i class="fas fa-wifi"></i> Free WiFi</span>
+                                <span><i class="fas fa-tv"></i> Flat Screen TV</span>
+                                <span><i class="fas fa-snowflake"></i> Air Conditioning</span>
+                                <span><i class="fas fa-coffee"></i> Tea/Coffee</span>
+                                <span><i class="fas fa-safe"></i> Safe</span>
+                                <span><i class="fas fa-phone"></i> Phone</span>
+                            </div>
+                        </div>
+                        
+                        <div class="room-footer">
+                            <div class="room-price">
+                                <span class="price-amount">$180</span>
+                                <span class="price-unit">per night</span>
+                                <span class="price-note">Taxes included</span>
+                            </div>
+                            <div class="room-actions">
+                                <button class="btn-secondary" onclick="viewRoomDetails('standard-city-room')">View Details</button>
+                                <button class="btn-primary">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room Item 5 -->
+                <div class="room-item" data-aos="fade-up" data-aos-delay="400" data-type="penthouse" data-price="750" data-capacity="4" data-view="sea" data-features="pool">
+                    <div class="room-image">
+                        <img src="../images/room5.jpg" alt="Penthouse with Rooftop Pool">
+                        <div class="room-badge exclusive">Exclusive</div>
+                        <div class="room-gallery-btn" onclick="openGallery('penthouse-rooftop')">
+                            <i class="fas fa-images"></i> View Gallery
+                        </div>
+                    </div>
+                    <div class="room-details">
+                        <div class="room-header">
+                            <h3>Penthouse with Rooftop Pool</h3>
+                            <div class="room-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-score">5.0</span>
+                                <span class="rating-count">(42 reviews)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="room-info">
+                            <div class="room-specs">
+                                <span><i class="fas fa-expand-arrows-alt"></i> 200 m²</span>
+                                <span><i class="fas fa-users"></i> 4 Guests</span>
+                                <span><i class="fas fa-eye"></i> 360° View</span>
+                                <span><i class="fas fa-bed"></i> 2 Bedrooms</span>
+                            </div>
+                            
+                            <p class="room-description">
+                                Ultimate luxury penthouse with private rooftop pool, helicopter landing pad, 
+                                panoramic views, personal chef, and 24/7 concierge service.
+                            </p>
+                            
+                            <div class="room-amenities">
+                                <span><i class="fas fa-swimming-pool"></i> Rooftop Pool</span>
+                                <span><i class="fas fa-helicopter"></i> Helipad Access</span>
+                                <span><i class="fas fa-user-tie"></i> Personal Chef</span>
+                                <span><i class="fas fa-wine-glass"></i> Private Bar</span>
+                                <span><i class="fas fa-spa"></i> In-room Spa</span>
+                                <span><i class="fas fa-crown"></i> VIP Service</span>
+                            </div>
+                        </div>
+                        
+                        <div class="room-footer">
+                            <div class="room-price">
+                                <span class="price-amount">$750</span>
+                                <span class="price-unit">per night</span>
+                                <span class="price-note">Taxes included</span>
+                            </div>
+                            <div class="room-actions">
+                                <button class="btn-secondary" onclick="viewRoomDetails('penthouse-rooftop')">View Details</button>
+                                <button class="btn-primary">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room Item 6 -->
+                <div class="room-item" data-aos="fade-up" data-aos-delay="500" data-type="deluxe" data-price="220" data-capacity="1" data-view="mountain" data-features="fireplace">
+                    <div class="room-image">
+                        <img src="../images/room6.jpg" alt="Deluxe Single Mountain View">
+                        <div class="room-badge cozy">Cozy</div>
+                        <div class="room-gallery-btn" onclick="openGallery('deluxe-single-mountain')">
+                            <i class="fas fa-images"></i> View Gallery
+                        </div>
+                    </div>
+                    <div class="room-details">
+                        <div class="room-header">
+                            <h3>Deluxe Single Mountain View</h3>
+                            <div class="room-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-score">4.6</span>
+                                <span class="rating-count">(178 reviews)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="room-info">
+                            <div class="room-specs">
+                                <span><i class="fas fa-expand-arrows-alt"></i> 35 m²</span>
+                                <span><i class="fas fa-users"></i> 1 Guest</span>
+                                <span><i class="fas fa-eye"></i> Mountain View</span>
+                                <span><i class="fas fa-bed"></i> Single Bed</span>
+                            </div>
+                            
+                            <p class="room-description">
+                                Perfect for solo travelers, featuring stunning mountain views, cozy fireplace, 
+                                work desk, and peaceful atmosphere ideal for relaxation and reflection.
+                            </p>
+                            
+                            <div class="room-amenities">
+                                <span><i class="fas fa-fire"></i> Fireplace</span>
+                                <span><i class="fas fa-mountain"></i> Mountain View</span>
+                                <span><i class="fas fa-desk"></i> Work Desk</span>
+                                <span><i class="fas fa-book"></i> Reading Corner</span>
+                                <span><i class="fas fa-mug-hot"></i> Tea Station</span>
+                                <span><i class="fas fa-moon"></i> Blackout Curtains</span>
+                            </div>
+                        </div>
+                        
+                        <div class="room-footer">
+                            <div class="room-price">
+                                <span class="price-amount">$220</span>
+                                <span class="price-unit">per night</span>
+                                <span class="price-note">Taxes included</span>
+                            </div>
+                            <div class="room-actions">
+                                <button class="btn-secondary" onclick="viewRoomDetails('deluxe-single-mountain')">View Details</button>
+                                <button class="btn-primary">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Section -->
+            <div class="load-more-section" data-aos="fade-up">
+                <button class="load-more-btn" id="loadMoreRooms">
+                    <i class="fas fa-plus"></i>
+                    Load More Rooms
+                </button>
+                <p class="results-info">Showing 6 of 24 available rooms</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Room Features Section -->
+    <section class="room-features-section">
+        <div class="container">
+            <h2 data-aos="fade-up">Why Choose Our Rooms</h2>
+            <div class="features-grid">
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-concierge-bell"></i>
+                    </div>
+                    <h3>24/7 Concierge</h3>
+                    <p>Personal concierge service available around the clock for all your needs</p>
+                </div>
+
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3>Spa Services</h3>
+                    <p>In-room spa treatments and access to our world-class wellness center</p>
+                </div>
+
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Gourmet Dining</h3>
+                    <p>Room service from award-winning restaurants and private chef options</p>
+                </div>
+
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                    <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>Free WiFi</h3>
+                    <p>Complimentary high-speed internet access in all rooms and public areas</p>
+                </div>
+
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Premium Security</h3>
+                    <p>Advanced security systems and privacy protection for your peace of mind</p>
+                </div>
+
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Transport Services</h3>
+                    <p>Complimentary airport transfers and luxury vehicle rental options</p>
+                </div>
+
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>High-Speed Internet</h3>
+                    <p>Ultra-fast fiber internet and dedicated workspace for business travelers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Room Modal for Details -->
+    <div class="room-modal" id="roomModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalRoomTitle">Room Details</h2>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-gallery">
+                    <div class="main-image">
+                        <img id="modalMainImage" src="" alt="Room Image">
+                    </div>
+                    <div class="thumbnail-images">
+                        <img class="thumbnail active" src="../images/room1.jpg" alt="Room View 1" onclick="changeMainImage(this)">
+                        <img class="thumbnail" src="../images/room2.jpg" alt="Room View 2" onclick="changeMainImage(this)">
+                        <img class="thumbnail" src="../images/room3.jpg" alt="Room View 3" onclick="changeMainImage(this)">
+                        <img class="thumbnail" src="../images/room4.jpg" alt="Room View 4" onclick="changeMainImage(this)">
+                    </div>
+                </div>
+                <div class="modal-details">
+                    <div class="modal-specs" id="modalSpecs">
+                        <!-- Room specifications will be populated here -->
+                    </div>
+                    <div class="modal-description" id="modalDescription">
+                        <!-- Room description will be populated here -->
+                    </div>
+                    <div class="modal-amenities" id="modalAmenities">
+                        <!-- Room amenities will be populated here -->
+                    </div>
+                    <div class="modal-booking">
+                        <div class="modal-price">
+                            <span class="price" id="modalPrice">$350</span>
+                            <span class="unit">per night</span>
+                        </div>
+                        <button class="btn-primary modal-book-btn">Book This Room</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <p class="sub_logo_text">EL Ahram</p>
+                    <p class="sub_logo_text">Travels</p>
+                </div>
+                <p>Your trusted travel companion for extraordinary adventures around the world.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./rooms.html">Rooms</a></li>
+                    <li><a href="./hotels.html">Hotels</a></li>
+                    <li><a href="../index.html#gallery">Gallery</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+20 101 001 000</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@elahramtravels.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-location-dot"></i>
+                    <span>Cairo, Egypt</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 EL Ahram Travels. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="rooms.js"></script>
+    {% comment %} <script src="../mains.js"></script> {% endcomment %}
+
+</body>
+</html>

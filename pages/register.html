@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - EL Ahram Travels</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./pages.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header class="page-header">
+        <div class="page-header-content">
+            <div class="page-logo">
+                <a href="../index.html">
+                    <p class="banner_logo_text">EL Ahram</p>
+                    <p class="banner_logo_text">Travels</p>
+                </a>
+            </div>
+            <nav class="page-nav">
+                <ul class="page-nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./rooms.html">Rooms</a></li>
+                    <li><a href="./hotels.html">Hotels</a></li>
+                    <li><a href="../index.html#gallery">Gallery</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li class="auth-active"><a href="./login.html">Login</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <div class="mobile-logo">
+                    <p>EL Ahram</p>
+                    <p>Travels</p>
+                </div>
+                <button class="close-menu" id="closeMenu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <ul class="mobile-nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./rooms.html">Rooms</a></li>
+                    <li><a href="./hotels.html">Hotels</a></li>
+                    <li><a href="../index.html#gallery">Gallery</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="./login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Register Section -->
+    <section class="auth-section">
+        <div class="auth-container">
+            <div class="auth-content">
+                <!-- Left Side - Image -->
+                <div class="auth-image" data-aos="fade-right">
+                    <div class="auth-image-overlay">
+                        <h2>Join Our Community!</h2>
+                        <p>Create your account and unlock exclusive travel experiences, personalized recommendations, and member-only deals.</p>
+                        <div class="auth-features">
+                            <div class="auth-feature">
+                                <i class="fas fa-percentage"></i>
+                                <span>Up to 30% Member Discounts</span>
+                            </div>
+                            <div class="auth-feature">
+                                <i class="fas fa-crown"></i>
+                                <span>VIP Travel Experiences</span>
+                            </div>
+                            <div class="auth-feature">
+                                <i class="fas fa-heart"></i>
+                                <span>Save Favorite Destinations</span>
+                            </div>
+                            <div class="auth-feature">
+                                <i class="fas fa-calendar-check"></i>
+                                <span>Easy Booking Management</span>
+                            </div>
+                            <div class="auth-feature">
+                                <i class="fas fa-gift"></i>
+                                <span>Birthday & Anniversary Perks</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side - Register Form -->
+                <div class="auth-form-container" data-aos="fade-left">
+                    <div class="auth-form-header">
+                        <h1>Create Account</h1>
+                        <p>Start your journey with EL Ahram Travels and discover the world like never before</p>
+                    </div>
+
+                    <form class="auth-form register-form" id="registerForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-phone"></i>
+                                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-flag"></i>
+                                    <select id="country" name="country" required>
+                                        <option value="">Select your country</option>
+                                        <option value="EG">Egypt</option>
+                                        <option value="SA">Saudi Arabia</option>
+                                        <option value="AE">United Arab Emirates</option>
+                                        <option value="US">United States</option>
+                                        <option value="UK">United Kingdom</option>
+                                        <option value="FR">France</option>
+                                        <option value="DE">Germany</option>
+                                        <option value="IT">Italy</option>
+                                        <option value="ES">Spain</option>
+                                        <option value="GR">Greece</option>
+                                        <option value="TR">Turkey</option>
+                                        <option value="JP">Japan</option>
+                                        <option value="AU">Australia</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="BR">Brazil</option>
+                                        <option value="IN">India</option>
+                                        <option value="CN">China</option>
+                                        <option value="RU">Russia</option>
+                                        <option value="OTHER">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" id="password" name="password" placeholder="Create a strong password" required>
+                                    <button type="button" class="password-toggle" id="passwordToggle">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                                <div class="password-strength" id="passwordStrength">
+                                    <div class="strength-bar">
+                                        <div class="strength-fill"></div>
+                                    </div>
+                                    <span class="strength-text">Password strength</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirm Password</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+                                    <button type="button" class="password-toggle" id="confirmPasswordToggle">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="birthDate">Date of Birth</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-calendar"></i>
+                                <input type="date" id="birthDate" name="birthDate" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="travelPreferences">Travel Preferences (Optional)</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-heart"></i>
+                                <select id="travelPreferences" name="travelPreferences">
+                                    <option value="">Select your travel style</option>
+                                    <option value="luxury">Luxury Travel</option>
+                                    <option value="adventure">Adventure Travel</option>
+                                    <option value="cultural">Cultural Exploration</option>
+                                    <option value="beach">Beach & Relaxation</option>
+                                    <option value="business">Business Travel</option>
+                                    <option value="family">Family Vacations</option>
+                                    <option value="solo">Solo Travel</option>
+                                    <option value="romantic">Romantic Getaways</option>
+                                    <option value="budget">Budget Travel</option>
+                                    <option value="eco">Eco Tourism</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="terms-container">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">
+                                I agree to the <a href="#" target="_blank">Terms of Service</a> and 
+                                <a href="#" target="_blank">Privacy Policy</a>. I also consent to receive 
+                                promotional emails about travel deals and offers.
+                            </label>
+                        </div>
+
+                        <div class="terms-container">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">
+                                Subscribe to our newsletter for exclusive travel deals and destination guides.
+                            </label>
+                        </div>
+
+                        <button type="submit" class="auth-btn">
+                            <span>Create Account</span>
+                            <i class="fas fa-user-plus"></i>
+                        </button>
+
+                        <div class="divider">
+                            <span>OR</span>
+                        </div>
+
+                        <div class="social-login">
+                            <button type="button" class="social-btn google-btn">
+                                <i class="fab fa-google"></i>
+                                Sign up with Google
+                            </button>
+                            <button type="button" class="social-btn facebook-btn">
+                                <i class="fab fa-facebook-f"></i>
+                                Sign up with Facebook
+                            </button>
+                        </div>
+
+                        <div class="auth-switch">
+                            <p>Already have an account? <a href="./login.html">Sign In</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="member-benefits">
+        <div class="container">
+            <h2 data-aos="fade-up">Member Benefits</h2>
+            <p data-aos="fade-up" data-aos-delay="200">Join thousands of satisfied travelers and unlock exclusive perks</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-icon">
+                        <i class="fas fa-percent"></i>
+                    </div>
+                    <h3>Exclusive Discounts</h3>
+                    <p>Save up to 30% on hotels, flights, and tour packages with member-only pricing.</p>
+                </div>
+
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>Early Access</h3>
+                    <p>Be the first to know about flash sales, new destinations, and limited-time offers.</p>
+                </div>
+
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Personal Concierge</h3>
+                    <p>Get dedicated support from our travel experts for trip planning and assistance.</p>
+                </div>
+
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="benefit-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Birthday Rewards</h3>
+                    <p>Celebrate with special birthday discounts and anniversary travel credits.</p>
+                </div>
+
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="benefit-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Loyalty Points</h3>
+                    <p>Earn points on every booking and redeem them for free nights and upgrades.</p>
+                </div>
+
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Travel Protection</h3>
+                    <p>Complimentary travel insurance and 24/7 emergency assistance worldwide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <p class="sub_logo_text">EL Ahram</p>
+                    <p class="sub_logo_text">Travels</p>
+                </div>
+                <p>Your trusted travel companion for extraordinary adventures around the world.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./rooms.html">Rooms</a></li>
+                    <li><a href="./hotels.html">Hotels</a></li>
+                    <li><a href="../index.html#gallery">Gallery</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+20 101 001 000</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@elahramtravels.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-location-dot"></i>
+                    <span>Cairo, Egypt</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 EL Ahram Travels. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Mobile Menu Functionality
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        const closeMenu = document.getElementById('closeMenu');
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenuOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        }
+
+        if (closeMenu) {
+            closeMenu.addEventListener('click', () => {
+                mobileMenuOverlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        }
+
+        if (mobileMenuOverlay) {
+            mobileMenuOverlay.addEventListener('click', (e) => {
+                if (e.target === mobileMenuOverlay) {
+                    mobileMenuOverlay.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+
+        // Password Toggle Functions
+        function setupPasswordToggle(toggleId, inputId) {
+            const toggle = document.getElementById(toggleId);
+            const input = document.getElementById(inputId);
+
+            if (toggle && input) {
+                toggle.addEventListener('click', () => {
+                    const type = input.type === 'password' ? 'text' : 'password';
+                    input.type = type;
+                    
+                    const icon = toggle.querySelector('i');
+                    icon.classList.toggle('fa-eye');
+                    icon.classList.toggle('fa-eye-slash');
+                });
+            }
+        }
+
+        setupPasswordToggle('passwordToggle', 'password');
+        setupPasswordToggle('confirmPasswordToggle', 'confirmPassword');
+
+        // Password Strength Checker
+        const passwordInput = document.getElementById('password');
+        const strengthIndicator = document.getElementById('passwordStrength');
+
+        if (passwordInput && strengthIndicator) {
+            passwordInput.addEventListener('input', () => {
+                const password = passwordInput.value;
+                const strength = calculatePasswordStrength(password);
+                updateStrengthIndicator(strength);
+            });
+        }
+
+        function calculatePasswordStrength(password) {
+            let score = 0;
+            
+            if (password.length >= 8) score += 1;
+            if (password.length >= 12) score += 1;
+            if (/[a-z]/.test(password)) score += 1;
+            if (/[A-Z]/.test(password)) score += 1;
+            if (/[0-9]/.test(password)) score += 1;
+            if (/[^A-Za-z0-9]/.test(password)) score += 1;
+            
+            return Math.min(score, 5);
+        }
+
+        function updateStrengthIndicator(strength) {
+            const strengthFill = strengthIndicator.querySelector('.strength-fill');
+            const strengthText = strengthIndicator.querySelector('.strength-text');
+            
+            const colors = ['#ff4444', '#ff8800', '#ffbb00', '#88bb00', '#00bb44'];
+            const texts = ['Very Weak', 'Weak', 'Fair', 'Good', 'Strong'];
+            
+            const percentage = (strength / 5) * 100;
+            strengthFill.style.width = percentage + '%';
+            strengthFill.style.backgroundColor = colors[strength - 1] || '#ddd';
+            strengthText.textContent = strength > 0 ? texts[strength - 1] : 'Password strength';
+        }
+
+        // Form Validation and Submission
+        const registerForm = document.getElementById('registerForm');
+        if (registerForm) {
+            registerForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = new FormData(registerForm);
+                const data = Object.fromEntries(formData);
+                
+                // Validate form
+                if (!validateForm(data)) {
+                    return;
+                }
+                
+                // Show loading state
+                const submitBtn = registerForm.querySelector('.auth-btn');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Creating Account...';
+                submitBtn.disabled = true;
+                
+                // Simulate registration process
+                setTimeout(() => {
+                    showSuccessMessage();
+                    
+                    // Reset button
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                    
+                    // Redirect after success
+                    setTimeout(() => {
+                        window.location.href = './login.html';
+                    }, 2000);
+                }, 2000);
+            });
+        }
+
+        function validateForm(data) {
+            // Required fields validation
+            const requiredFields = ['firstName', 'lastName', 'email', 'phone', 'country', 'password', 'confirmPassword', 'birthDate'];
+            
+            for (let field of requiredFields) {
+                if (!data[field] || data[field].trim() === '') {
+                    showErrorMessage(`Please fill in your ${field.replace(/([A-Z])/g, ' $1').toLowerCase()}.`);
+                    return false;
+                }
+            }
+            
+            // Email validation
+            if (!isValidEmail(data.email)) {
+                showErrorMessage('Please enter a valid email address.');
+                return false;
+            }
+            
+            // Phone validation
+            if (!isValidPhone(data.phone)) {
+                showErrorMessage('Please enter a valid phone number.');
+                return false;
+            }
+            
+            // Password validation
+            if (data.password.length < 8) {
+                showErrorMessage('Password must be at least 8 characters long.');
+                return false;
+            }
+            
+            if (data.password !== data.confirmPassword) {
+                showErrorMessage('Passwords do not match.');
+                return false;
+            }
+            
+            // Age validation (must be 18+)
+            const birthDate = new Date(data.birthDate);
+            const today = new Date();
+            const age = today.getFullYear() - birthDate.getFullYear();
+            
+            if (age < 18) {
+                showErrorMessage('You must be at least 18 years old to register.');
+                return false;
+            }
+            
+            // Terms validation
+            if (!data.terms) {
+                showErrorMessage('Please accept the Terms of Service and Privacy Policy.');
+                return false;
+            }
+            
+            return true;
+        }
+
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        function isValidPhone(phone) {
+            const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+            return phoneRegex.test(phone.replace(/[\s\-\(\)]/g, ''));
+        }
+
+        function showErrorMessage(message) {
+            removeExistingMessages();
+            
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'error-message';
+            errorDiv.innerHTML = `<i class="fas fa-exclamation-triangle"></i> ${message}`;
+            
+            const form = document.querySelector('.auth-form');
+            form.insertBefore(errorDiv, form.firstChild);
+            
+            // Scroll to error message
+            errorDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            // Remove after 5 seconds
+            setTimeout(() => {
+                errorDiv.remove();
+            }, 5000);
+        }
+
+        function showSuccessMessage() {
+            removeExistingMessages();
+            
+            const successDiv = document.createElement('div');
+            successDiv.className = 'success-message';
+            successDiv.innerHTML = `<i class="fas fa-check-circle"></i> Account created successfully! Redirecting to login page...`;
+            
+            const form = document.querySelector('.auth-form');
+            form.insertBefore(successDiv, form.firstChild);
+            
+            // Scroll to success message
+            successDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function removeExistingMessages() {
+            const existingMessages = document.querySelectorAll('.error-message, .success-message');
+            existingMessages.forEach(msg => msg.remove());
+        }
+
+        // Social Registration
+        const googleBtn = document.querySelector('.google-btn');
+        const facebookBtn = document.querySelector('.facebook-btn');
+
+        if (googleBtn) {
+            googleBtn.addEventListener('click', () => {
+                alert('Google registration would be implemented here');
+            });
+        }
+
+        if (facebookBtn) {
+            facebookBtn.addEventListener('click', () => {
+                alert('Facebook registration would be implemented here');
+            });
+        }
+
+        // Form field animations
+        const inputs = document.querySelectorAll('.input-wrapper input, .input-wrapper select');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.classList.add('focused');
+            });
+            
+            input.addEventListener('blur', () => {
+                if (!input.value) {
+                    input.parentElement.classList.remove('focused');
+                }
+            });
+            
+            // Check if input has value on page load
+            if (input.value) {
+                input.parentElement.classList.add('focused');
+            }
+        });
+
+        // Set max date for birth date (18 years ago)
+        const birthDateInput = document.getElementById('birthDate');
+        if (birthDateInput) {
+            const today = new Date();
+            const maxDate = new Date(today.getFullYear() - 18, today.getMonth(), today.getDate());
+            birthDateInput.max = maxDate.toISOString().split('T')[0];
+            
+            // Set a reasonable min date (100 years ago)
+            const minDate = new Date(today.getFullYear() - 100, today.getMonth(), today.getDate());
+            birthDateInput.min = minDate.toISOString().split('T')[0];
+        }
+
+        // Real-time password matching
+        const confirmPasswordInput = document.getElementById('confirmPassword');
+        if (confirmPasswordInput && passwordInput) {
+            confirmPasswordInput.addEventListener('input', () => {
+                const password = passwordInput.value;
+                const confirmPassword = confirmPasswordInput.value;
+                
+                if (confirmPassword && password !== confirmPassword) {
+                    confirmPasswordInput.setCustomValidity('Passwords do not match');
+                    confirmPasswordInput.style.borderColor = '#ff4444';
+                } else {
+                    confirmPasswordInput.setCustomValidity('');
+                    confirmPasswordInput.style.borderColor = '#e0e0e0';
+                }
+            });
+        }
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.page-header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+    <!-- Additional CSS for member benefits and password strength -->
+    <style>
+        .member-benefits {
+            padding: 100px 20px;
+            background: white;
+        }
+
+        .member-benefits h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+            font-weight: 700;
+        }
+
+        .member-benefits p {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 60px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .benefit-card {
+            background: #f8f9fa;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .benefit-card:hover {
+            background: white;
+            border-color: #007bff;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 123, 255, 0.1);
+        }
+
+        .benefit-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover .benefit-icon {
+            transform: scale(1.1);
+        }
+
+        .benefit-icon i {
+            font-size: 1.8rem;
+            color: white;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .benefit-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .password-strength {
+            margin-top: 8px;
+        }
+
+        .strength-bar {
+            height: 4px;
+            background: #e0e0e0;
+            border-radius: 2px;
+            overflow: hidden;
+            margin-bottom: 5px;
+        }
+
+        .strength-fill {
+            height: 100%;
+            background: #ddd;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            width: 0%;
+        }
+
+        .strength-text {
+            font-size: 12px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .input-wrapper select {
+            padding-left: 45px;
+            background: #f8f9fa;
+            cursor: pointer;
+        }
+
+        .input-wrapper select:focus {
+            background: white;
+        }
+
+        @media (max-width: 768px) {
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .member-benefits {
+                padding: 60px 15px;
+            }
+        }
+    </style>
+</body>
+</html>

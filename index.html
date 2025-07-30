@@ -3,288 +3,616 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EL Ahram traviles</title>
+    <title>EL Ahram Travels - Explore The Beauty of The World</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <div class="mobile-logo">
+                    <p>EL Ahram</p>
+                    <p>Travels</p>
+                </div>
+                <button class="close-menu" id="closeMenu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <ul class="mobile-nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="./pages/rooms.html">Rooms</a></li>
+                    <li><a href="#premium">Premium</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="./pages/hotels.html">Hotels</a></li>
+                    <li><a href="./pages/login.html">Login</a></li>
+                    <li><a href="./pages/register.html">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
 
-    <!-- the frist section the banner :
-    contains 3 main parties 
-    1-the header (have the background photo in the css file)   
-    2-banner detailes have the ditales and the inputs bar :)-->
-
-    <section class="banner">
-    <!---------------- header---- ------------>
+    <!-- Banner Section -->
+    <section class="banner" id="home">
+        <!-- Header -->
         <header class="banner_header">
             <div class="banner_logo">
                 <p class="banner_logo_text">EL Ahram</p>
-                <p class="banner_logo_text">Traviles</p>
+                <p class="banner_logo_text">Travels</p>
             </div>
             <nav class="banner_nav">
                 <ul class="nav_links">
-                    <li class="nav_link">Home</li>
-                    <li class="nav_link">Rooms</li>
-                    <li class="nav_link">Premium</li>
-                    <li class="nav_link">Gallary</li>
-                    <li class="nav_link">About</li>
+                    <li class="nav_link"><a href="#home">Home</a></li>
+                    <li class="nav_link"><a href="./pages/rooms.html">Rooms</a></li>
+                    <li class="nav_link"><a href="#premium">Premium</a></li>
+                    <li class="nav_link"><a href="#gallery">Gallery</a></li>
+                    <li class="nav_link"><a href="#about">About</a></li>
+                    <li class="nav_link"><a href="./pages/hotels.html">Hotels</a></li>
+                    <li class="nav_link auth-link"><a href="./pages/login.html">Login</a></li>
+                    <li class="nav_link auth-link"><a href="./pages/register.html">Register</a></li>
                 </ul>
             </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
         </header>
-<!-- banner detailes -->
-    <div class="banner_detailse">
 
-        <div class="banner_detailse_badge">
-            Here you can find the best places to travel..
+        <!-- Banner Details -->
+        <div class="banner_detailse">
+            <div class="banner_detailse_badge">
+                Discover the most beautiful destinations around the world
+            </div>
+            <h1 class="banner-detalies-heading" data-aos="fade-up" data-aos-duration="1000">
+                Explore The Beauty of The World
+            </h1>
+            <p class="banner-subtitle" data-aos="fade-up" data-aos-duration="1200">
+                From ancient wonders to modern marvels, experience unforgettable journeys
+            </p>
+            <button class="banner-detailse-btn" data-aos="fade-up" data-aos-duration="1400">
+                Explore Now
+            </button>
+
+            <div class="banner-detalies-booking" data-aos="fade-up" data-aos-duration="1600">
+                <div class="booking-inp">
+                    <label for="checkin">Check In Date:</label>
+                    <input type="date" id="checkin">
+                </div>
+                <div class="booking-inp">
+                    <label for="checkout">Check Out Date:</label>
+                    <input type="date" id="checkout">
+                </div>
+                <div class="booking-inp">
+                    <label for="adults">Adults:</label>
+                    <input type="number" id="adults" placeholder="No. of Adults" min="1" value="1">
+                </div>
+                <div class="booking-inp">
+                    <label for="children">Children:</label>
+                    <input type="number" id="children" placeholder="No. of Children" min="0" value="0">
+                </div>
+                <div class="booking-inp">
+                    <button class="booking-inp-button">Book Now</button>
+                </div>
+            </div>
         </div>
-        <h1 class="banner-detalies-heading" data-aos="fade-up" data-aos-duration="1000">Explour The Beauty of The Word</h1>
-        <button class="banner-detailse-btn">Explour Now</button>
-
-        <div class="banner-detalies-booking">
-            <div class="booking-inp">
-                <label for="checkin">Cheak In Date :</label>
-                <input type="date" id="checkin">
-            </div>
-            <div class="booking-inp">
-                <label for="checkout">Cheak Out Date :</label>
-                <input type="date" id="checkout">
-            </div>
-            <div class="booking-inp">
-                <label for="Adults">Cheak In Date :</label>
-                <input type="number" id="Adults" placeholder="No. of Adults">
-            </div>
-            <div class="booking-inp">
-                <label for="Children">Cheak In Date :</label>
-                <input type="number" id="Children" placeholder="No. of Children">
-            </div>
-            
-            <div class="booking-inp">
-                <button class="booking-inp-button">Book Now</button>
-            </div>
-
-        </div>
-    </div>
     </section>
 
-    <!-- The second section About Us -->
-
-    <section class="aboutUs">
-        <i class="fa-solid fa-globe aboutUs_icon"></i>
-        <p>
-        <span id="aboutUs_lorem">Lorem</span> ipsum dolor, sit amet consectetur adipisicing elit. Libero, illo laboriosam amet in facilis ducimus dolore commodi temporibus? Molestiae veritatis sapiente quia in autem optio aliquid atque odit error incidunt?
+    <!-- About Us Section -->
+    <section class="aboutUs" id="about">
+        <i class="fa-solid fa-globe aboutUs_icon" data-aos="zoom-in"></i>
+        <h2 data-aos="fade-up">About EL Ahram Travels</h2>
+        <p data-aos="fade-up" data-aos-delay="200">
+            Welcome to <span id="aboutUs_lorem">EL Ahram Travels</span>, your gateway to extraordinary adventures around the globe. 
+            With over two decades of experience in the travel industry, we specialize in creating unforgettable journeys 
+            that connect you with the world's most breathtaking destinations. From luxurious Mediterranean retreats to 
+            cultural explorations in ancient lands, we craft personalized experiences that exceed your expectations.
         </p>
+        <div class="about-stats" data-aos="fade-up" data-aos-delay="400">
+            <div class="stat-item">
+                <h3>500+</h3>
+                <p>Destinations</p>
+            </div>
+            <div class="stat-item">
+                <h3>10,000+</h3>
+                <p>Happy Travelers</p>
+            </div>
+            <div class="stat-item">
+                <h3>20+</h3>
+                <p>Years Experience</p>
+            </div>
+            <div class="stat-item">
+                <h3>24/7</h3>
+                <p>Customer Support</p>
+            </div>
+        </div>
     </section>
 
-    <!-- rooms section -->
-    <section class="rooms">
-        <h1 class="roomsTitle">The Best Greek Rooms For You</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum minima unde nesciunt sit soluta alias eveniet.</p>
+    <!-- Featured Destinations Section -->
+    <section class="featured-destinations">
+        <div class="container">
+            <h2 data-aos="fade-up">Featured Destinations</h2>
+            <p data-aos="fade-up" data-aos-delay="200">Discover our most popular travel destinations</p>
+            
+            <div class="destinations-grid">
+                <div class="destination-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="destination-image">
+                        <img src="./images/gallery1.jpg" alt="Santorini, Greece">
+                        <div class="destination-overlay">
+                            <h3>Santorini, Greece</h3>
+                            <p>From $299/night</p>
+                            <button class="explore-btn">Explore</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="destination-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="destination-image">
+                        <img src="./images/gallery2.jpg" alt="Mykonos, Greece">
+                        <div class="destination-overlay">
+                            <h3>Mykonos, Greece</h3>
+                            <p>From $249/night</p>
+                            <button class="explore-btn">Explore</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="destination-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="destination-image">
+                        <img src="./images/gallery3.jpg" alt="Crete, Greece">
+                        <div class="destination-overlay">
+                            <h3>Crete, Greece</h3>
+                            <p>From $199/night</p>
+                            <button class="explore-btn">Explore</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="destination-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="destination-image">
+                        <img src="./images/gallery4.jpg" alt="Rhodes, Greece">
+                        <div class="destination-overlay">
+                            <h3>Rhodes, Greece</h3>
+                            <p>From $179/night</p>
+                            <button class="explore-btn">Explore</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section class="rooms" id="rooms">
+        <h1 class="roomsTitle" data-aos="fade-up">The Best Greek Accommodations For You</h1>
+        <p data-aos="fade-up" data-aos-delay="200">Choose from our carefully selected range of premium accommodations, each offering unique experiences and exceptional comfort.</p>
     
         <div class="rooms_area">
-            <div class="one_room" data-aos="fade-up">
+            <div class="one_room" data-aos="fade-up" data-aos-delay="100">
                 <div class="room-image">
-                    <img class="r_image" src="./images/room1.jpg" alt="greek rooms">
+                    <img class="r_image" src="./images/room1.jpg" alt="Deluxe Villa">
+                    <div class="room-badge">Premium</div>
                 </div>
                 <div class="room-detalis">
                     <h2>Deluxe Villa</h2>
+                    <div class="room-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">(4.8/5)</span>
+                    </div>
                     <h3>$300 / night</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>Luxurious villa with stunning sea views, private pool, and exclusive amenities for the ultimate Greek island experience.</p>
+                    <div class="room-features">
+                        <span><i class="fas fa-wifi"></i> Free WiFi</span>
+                        <span><i class="fas fa-swimming-pool"></i> Pool</span>
+                        <span><i class="fas fa-car"></i> Parking</span>
+                    </div>
                     <button class="room-btn btn">Know More</button>
                 </div>
             </div>
 
-            <div class="one_room" data-aos="fade-up">
-                <div class="room-image" data-aos="fade-up">
-                    <img class="r_image" src="./images/room2.jpg" alt="greek rooms">
-                </div>
-                <div class="room-detalis">
-                    <h2>Share hostel</h2>
-                    <h3>$200 / night</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <button class="room-btn btn">Know More</button>
-                </div>
-            </div>
-
-            <div class="one_room" data-aos="fade-up">
-                <div class="room-image" data-aos="fade-up">
-                    <img class="r_image" src="./images/room3.jpg" alt="greek rooms">
-                </div>
-                <div class="room-detalis">
-                    <h2>Lake side Villa</h2>
-                    <h3>$400 / night</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <button class="room-btn btn">Know More</button>
-                </div>
-            </div>
-
-            <div class="one_room" data-aos="fade-up">
-                <div class="room-image" data-aos="fade-up">
-                    <img class="r_image" src="./images/room4.jpg" alt="greek rooms">
-                </div>
-                <div class="room-detalis">
-                    <h2>Prived Villa</h2>
-                    <h3>$450 / night</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <button class="room-btn btn">Know More</button>
-                </div>
-            </div>
-
-            <div class="one_room" data-aos="fade-up">
-                <div class="room-image" data-aos="fade-up">
-                    <img class="r_image img-5" src="./images/room5.jpg" alt="greek rooms">
-                </div>
-                <div class="room-detalis">
-                    <h2>Prived Deluxe</h2>
-                    <h3>$350 / night</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <button class="room-btn btn">Know More</button>
-                </div>
-            </div>
-
-            <div class="one_room" data-aos="fade-up">
+            <div class="one_room" data-aos="fade-up" data-aos-delay="200">
                 <div class="room-image">
-                    <img class="r_image img-5" src="./images/room6.jpg" alt="greek rooms">
+                    <img class="r_image" src="./images/room2.jpg" alt="Share Hostel">
+                    <div class="room-badge">Budget</div>
                 </div>
                 <div class="room-detalis">
-                    <h2>Single Bed</h2>
-                    <h3>$150 / night</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <h2>Shared Hostel</h2>
+                    <div class="room-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-text">(4.2/5)</span>
+                    </div>
+                    <h3>$50 / night</h3>
+                    <p>Comfortable shared accommodation perfect for budget travelers and backpackers exploring the Greek islands.</p>
+                    <div class="room-features">
+                        <span><i class="fas fa-wifi"></i> Free WiFi</span>
+                        <span><i class="fas fa-utensils"></i> Kitchen</span>
+                        <span><i class="fas fa-users"></i> Social</span>
+                    </div>
                     <button class="room-btn btn">Know More</button>
                 </div>
             </div>
 
+            <div class="one_room" data-aos="fade-up" data-aos-delay="300">
+                <div class="room-image">
+                    <img class="r_image" src="./images/room3.jpg" alt="Lake Side Villa">
+                    <div class="room-badge">Luxury</div>
+                </div>
+                <div class="room-detalis">
+                    <h2>Lake Side Villa</h2>
+                    <div class="room-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">(4.9/5)</span>
+                    </div>
+                    <h3>$400 / night</h3>
+                    <p>Exclusive lakeside villa offering tranquil waters, mountain views, and premium spa services.</p>
+                    <div class="room-features">
+                        <span><i class="fas fa-spa"></i> Spa</span>
+                        <span><i class="fas fa-mountain"></i> Views</span>
+                        <span><i class="fas fa-concierge-bell"></i> Service</span>
+                    </div>
+                    <button class="room-btn btn">Know More</button>
+                </div>
+            </div>
+
+            <div class="one_room" data-aos="fade-up" data-aos-delay="400">
+                <div class="room-image">
+                    <img class="r_image" src="./images/room4.jpg" alt="Private Villa">
+                    <div class="room-badge">Exclusive</div>
+                </div>
+                <div class="room-detalis">
+                    <h2>Private Villa</h2>
+                    <div class="room-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">(4.9/5)</span>
+                    </div>
+                    <h3>$450 / night</h3>
+                    <p>Ultimate privacy and luxury with personal chef, butler service, and breathtaking panoramic views.</p>
+                    <div class="room-features">
+                        <span><i class="fas fa-user-tie"></i> Butler</span>
+                        <span><i class="fas fa-utensils"></i> Chef</span>
+                        <span><i class="fas fa-eye"></i> Views</span>
+                    </div>
+                    <button class="room-btn btn">Know More</button>
+                </div>
+            </div>
+
+            <div class="one_room" data-aos="fade-up" data-aos-delay="500">
+                <div class="room-image">
+                    <img class="r_image img-5" src="./images/room5.jpg" alt="Private Deluxe">
+                    <div class="room-badge">Deluxe</div>
+                </div>
+                <div class="room-detalis">
+                    <h2>Private Deluxe</h2>
+                    <div class="room-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">(4.7/5)</span>
+                    </div>
+                    <h3>$350 / night</h3>
+                    <p>Sophisticated accommodation combining modern amenities with traditional Greek architecture and design.</p>
+                    <div class="room-features">
+                        <span><i class="fas fa-hot-tub"></i> Jacuzzi</span>
+                        <span><i class="fas fa-balcony"></i> Terrace</span>
+                        <span><i class="fas fa-glass-cheers"></i> Bar</span>
+                    </div>
+                    <button class="room-btn btn">Know More</button>
+                </div>
+            </div>
+
+            <div class="one_room" data-aos="fade-up" data-aos-delay="600">
+                <div class="room-image">
+                    <img class="r_image img-5" src="./images/room6.jpg" alt="Single Bed">
+                    <div class="room-badge">Economy</div>
+                </div>
+                <div class="room-detalis">
+                    <h2>Single Bed Room</h2>
+                    <div class="room-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-text">(4.3/5)</span>
+                    </div>
+                    <h3>$150 / night</h3>
+                    <p>Cozy and comfortable single rooms perfect for solo travelers seeking quality accommodation at great value.</p>
+                    <div class="room-features">
+                        <span><i class="fas fa-bed"></i> Comfort</span>
+                        <span><i class="fas fa-coffee"></i> Coffee</span>
+                        <span><i class="fas fa-tv"></i> TV</span>
+                    </div>
+                    <button class="room-btn btn">Know More</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="rooms-cta" data-aos="fade-up">
+            <a href="./pages/rooms.html" class="view-all-btn">View All Rooms</a>
         </div>
     </section>
 
-    <!-- subscrip section -->
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2 data-aos="fade-up">Our Services</h2>
+            <p data-aos="fade-up" data-aos-delay="200">Experience premium travel services tailored to your needs</p>
+            
+            <div class="services-grid">
+                <div class="service-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>Flight Booking</h3>
+                    <p>Book flights to your dream destinations with exclusive deals and flexible options.</p>
+                </div>
+                
+                <div class="service-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-hotel"></i>
+                    </div>
+                    <h3>Hotel Reservations</h3>
+                    <p>Secure the best accommodations with our extensive network of premium hotels.</p>
+                </div>
+                
+                <div class="service-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Car Rental</h3>
+                    <p>Explore at your own pace with our reliable car rental services worldwide.</p>
+                </div>
+                
+                <div class="service-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Tour Packages</h3>
+                    <p>Discover curated tour packages designed for unforgettable experiences.</p>
+                </div>
+                
+                <div class="service-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon">
+                        <i class="fas fa-passport"></i>
+                    </div>
+                    <h3>Visa Assistance</h3>
+                    <p>Get expert help with visa applications and travel documentation.</p>
+                </div>
+                
+                <div class="service-item" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock customer support for all your travel needs and emergencies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Newsletter Subscription Section -->
     <section class="subscrip">
         <div class="sub-text">
             <div class="sub_logo">
                 <p class="sub_logo_text">EL Ahram</p>
-                <p class="sub_logo_text">Traviles</p>
+                <p class="sub_logo_text">Travels</p>
             </div>
-            <p class="sub-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat doloribus, explicabo numquam totam temporibus corporis eligendi minus quam voluptas error maxime fuga dolorem enim autem! Corporis ipsum perspiciatis nobis quam.</p>
+            <p class="sub-desc">Stay updated with the latest travel deals, destination guides, and exclusive offers. Join our community of passionate travelers and never miss an opportunity to explore the world at unbeatable prices.</p>
         </div>
 
         <div class="sub-area">
-            <p>Subscrip to have the news:</p>
+            <p>Subscribe to receive the latest travel news and exclusive deals:</p>
             <div class="sub-form">
-                <input class="sub-input" type="text" placeholder="Enter your Email">
-                <button class="sub-btn btn">Subscrip Now</button>
+                <input class="sub-input" type="email" placeholder="Enter your Email Address" required>
+                <button class="sub-btn btn">Subscribe Now</button>
+            </div>
+            <div class="sub-benefits">
+                <div class="benefit-item">
+                    <i class="fas fa-percent"></i>
+                    <span>Exclusive Discounts</span>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-bell"></i>
+                    <span>Early Notifications</span>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-gift"></i>
+                    <span>Special Offers</span>
+                </div>
             </div>
         </div>
-
     </section>
 
-    <!-- bannaer for food -->
+    <!-- Food & Dining Section -->
     <section class="food">
-
-        <div class="food-detaile" data-aos="fade-up">
+        <div class="food-detaile" data-aos="fade-left">
             <h1 class="food-title-heading">
-                Best Food From All Greace at One Place :
+                Authentic Greek Cuisine Awaits You
             </h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit aspernatur accusamus animi obcaecati tempore, et aliquid, ex facilis inventore quasi doloremque laudantium natus autem modi. Odio nulla quae nostrum temporibus?</p>
-            <button class="sub-btn btn">Explore The Resturents</button>
+            <p>Indulge in the rich flavors of Mediterranean cuisine at our partner restaurants. From traditional tavernas serving fresh seafood to modern establishments offering contemporary Greek dishes, experience culinary excellence that perfectly complements your stay.</p>
+            <div class="food-features">
+                <div class="food-feature">
+                    <i class="fas fa-fish"></i>
+                    <span>Fresh Seafood Daily</span>
+                </div>
+                <div class="food-feature">
+                    <i class="fas fa-wine-glass"></i>
+                    <span>Local Wine Selection</span>
+                </div>
+                <div class="food-feature">
+                    <i class="fas fa-leaf"></i>
+                    <span>Organic Ingredients</span>
+                </div>
+            </div>
+            <button class="sub-btn btn">Explore Restaurants</button>
         </div>
-
     </section>
 
-    <!-- premium room section -->
-    <section class="premium">
-        <h1>Some Premium rooms</h1>
-
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis sit porro provident quaerat quo repellat culpa consectetur, cumque, exercitationem velit dolores distinctio eius dolor aliquam, iusto totam ipsum officia illo.</p>
+    <!-- Premium Rooms Section -->
+    <section class="premium" id="premium">
+        <h1 data-aos="fade-up">Premium Accommodations</h1>
+        <p data-aos="fade-up" data-aos-delay="200">Experience the pinnacle of luxury with our exclusive premium room collection, featuring world-class amenities and breathtaking views.</p>
 
         <div class="pre-rooms">
-            <div class="prem-img">
-                <img class="pre-vimg" src="./images/vertical.jpg" alt="">
+            <div class="prem-img" data-aos="fade-right">
+                <img class="pre-vimg" src="./images/vertical.jpg" alt="Premium Suite">
             </div>
-            <div class="prem-boxes" >
-                <div class="proom-box" data-aos="fade-up">
-                    <h1 class="prbox-head">
-                        Premium Lake Side Room
-                    </h1>
-                    <h3>200$ / night</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis sapiente mollitia odio quam ipsa est? Ratione laboriosam quas quibusdam, dicta minima excepturi alias tempore corrupti odit necessitatibus quia libero provident.</p>
-                    <button class="sub-btn btn">Explore More Rooms</button>
+            <div class="prem-boxes">
+                <div class="proom-box" data-aos="fade-up" data-aos-delay="100">
+                    <h1 class="prbox-head">Premium Lake Side Suite</h1>
+                    <div class="premium-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">(4.9/5)</span>
+                    </div>
+                    <h3>$500 / night</h3>
+                    <p>Magnificent lakeside suite featuring panoramic water views, private terrace, and exclusive access to premium spa facilities. Perfect for romantic getaways and special occasions.</p>
+                    <div class="premium-amenities">
+                        <span><i class="fas fa-hot-tub"></i> Private Jacuzzi</span>
+                        <span><i class="fas fa-concierge-bell"></i> Butler Service</span>
+                        <span><i class="fas fa-spa"></i> Spa Access</span>
+                    </div>
+                    <button class="sub-btn btn">Book Premium Suite</button>
                 </div>
 
-                <div class="proom-box" data-aos="fade-up">
-                    <h1 class="prbox-head">
-                        Premium Lake Side Room
-                    </h1>
-                    <h3>200$ / night</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis sapiente mollitia odio quam ipsa est? Ratione laboriosam quas quibusdam, dicta minima excepturi alias tempore corrupti odit necessitatibus quia libero provident.</p>
-                    <button class="sub-btn btn">Explore More Rooms</button>
+                <div class="proom-box" data-aos="fade-up" data-aos-delay="200">
+                    <h1 class="prbox-head">Executive Ocean View</h1>
+                    <div class="premium-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">(4.8/5)</span>
+                    </div>
+                    <h3>$450 / night</h3>
+                    <p>Sophisticated executive suite with floor-to-ceiling windows showcasing stunning ocean vistas, premium furnishings, and personalized concierge services for the discerning traveler.</p>
+                    <div class="premium-amenities">
+                        <span><i class="fas fa-eye"></i> Ocean Views</span>
+                        <span><i class="fas fa-wine-glass"></i> Minibar</span>
+                        <span><i class="fas fa-wifi"></i> High-Speed WiFi</span>
+                    </div>
+                    <button class="sub-btn btn">Book Executive Suite</button>
                 </div>
 
-                <div class="proom-box" data-aos="fade-up">
-                    <h1 class="prbox-head">
-                        Premium Lake Side Room
-                    </h1>
-                    <h3>200$ / night</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis sapiente mollitia odio quam ipsa est? Ratione laboriosam quas quibusdam, dicta minima excepturi alias tempore corrupti odit necessitatibus quia libero provident.</p>
-                    <button class="sub-btn btn">Explore More Rooms</button>
+                <div class="proom-box" data-aos="fade-up" data-aos-delay="300">
+                    <h1 class="prbox-head">Royal Penthouse Villa</h1>
+                    <div class="premium-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">(5.0/5)</span>
+                    </div>
+                    <h3>$800 / night</h3>
+                    <p>The ultimate luxury experience featuring a private rooftop pool, personal chef, helicopter pad access, and 360-degree views of the Aegean Sea. Exclusively designed for VIP guests.</p>
+                    <div class="premium-amenities">
+                        <span><i class="fas fa-helicopter"></i> Helicopter Access</span>
+                        <span><i class="fas fa-user-tie"></i> Personal Chef</span>
+                        <span><i class="fas fa-swimming-pool"></i> Private Pool</span>
+                    </div>
+                    <button class="sub-btn btn">Book Royal Penthouse</button>
                 </div>
             </div>
         </div>
-
     </section>
 
-    <!-- gallery section -->
-    <section class="gallery">
-        <!-- <marquee behavior="" direction="left" scrollamount="20"> -->
-            <img class="gal-img" data-aos="fade-up" src="./images/gallery1.jpg" alt="">
-            <img class="gal-img" data-aos="fade-up" src="./images/gallery2.jpg" alt="">
-            <img class="gal-img" data-aos="fade-up" src="./images/gallery3.jpg" alt="">
-            <img class="gal-img" data-aos="fade-up" src="./images/gallery4.jpg" alt="">
-            <img class="gal-img" data-aos="fade-up" src="./images/gallery5.jpg" alt="">
-            <img class="gal-img" data-aos="fade-up" src="./images/gallery6.jpg" alt="">
-
-
-    </section>
-
-    <!-- footer section -->
-    <section class="footer">
-        <div class="footer-info">
-            <h1>Company Info
-            </h1>
-            <p>A good plus of traveling is that often you get new skills without difficulty and without even noticing it.</p>
-            <i class="fa-solid fa-plane-departure plane-logo"></i>
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="gallery-header">
+            <h2 data-aos="fade-up">Photo Gallery</h2>
+            <p data-aos="fade-up" data-aos-delay="200">Discover the beauty that awaits you</p>
         </div>
-
-        <div class="footer-contact">
-            <h2>Contact Us</h2>
-
-            <div class="phone pcontact">
-                <i class="fa-solid fa-phone logo-1"></i>
-                <h3>0101001000</h3>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                <img class="gal-img" src="./images/gallery1.jpg" alt="Santorini Sunset">
+                <div class="gallery-overlay">
+                    <h3>Santorini Sunset</h3>
+                    <p>Breathtaking sunsets over the Aegean Sea</p>
+                </div>
             </div>
-            <div class="location pcontact">
-                <i class="fa-solid fa-location-dot logo-1"></i>
-                <h3>Giza, 123 Haram St.</h3>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                <img class="gal-img" src="./images/gallery2.jpg" alt="Mykonos Beaches">
+                <div class="gallery-overlay">
+                    <h3>Mykonos Beaches</h3>
+                    <p>Crystal clear waters and golden sands</p>
+                </div>
             </div>
-            <div class="time pcontact">
-                <i class="fa-solid fa-clock logo-1"></i>
-                <h3>Sat - Wen 9.00 - 2.00   </h3>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+                <img class="gal-img" src="./images/gallery3.jpg" alt="Traditional Architecture">
+                <div class="gallery-overlay">
+                    <h3>Traditional Architecture</h3>
+                    <p>Iconic whitewashed buildings</p>
+                </div>
             </div>
-            <div class="media-logos ">
-                <i class="fa-brands fa-facebook logo-2"></i>
-                <i class="fa-brands fa-square-twitter logo-2"></i>
-                <i class="fa-brands fa-instagram logo-2"></i>
-                <i class="fa-brands fa-google-plus logo-2"></i>
-                <i class="fa-brands fa-skype logo-2"></i>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
+                <img class="gal-img" src="./images/gallery4.jpg" alt="Ancient Ruins">
+                <div class="gallery-overlay">
+                    <h3>Ancient Ruins</h3>
+                    <p>Discover Greece's rich history</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="500">
+                <img class="gal-img" src="./images/gallery5.jpg" alt="Island Villages">
+                <div class="gallery-overlay">
+                    <h3>Island Villages</h3>
+                    <p>Charming traditional settlements</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="600">
+                <img class="gal-img" src="./images/gallery6.jpg" alt="Coastal Views">
+                <div class="gallery-overlay">
+                    <h3>Coastal Views</h3>
+                    <p>Spectacular Mediterranean coastlines</p>
+                </div>
             </div>
         </div>
-
-
     </section>
 
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 data-aos="fade-up">What Our Travelers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-content">
+                        <div class="rating">★★★★★</div>
+                        <p>"Absolutely amazing experience! EL Ahram Travels made our Greek island hopping adventure unforgettable. Every detail was perfectly planned."</p>
+                        <div class="testimonial-author">
+                            <img src="./images/gallery1.jpg" alt="Sarah Johnson">
+                            <div>
+                                <h4>Sarah Johnson</h4>
+                                <span>Travel Blogger</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-content">
+                        <div class="rating">★★★★★</div>
+                        <p>"Professional service, luxurious accommodations, and breathtaking locations. This was truly the vacation of a lifetime!"</p>
+                        <div class="testimonial-author">
+                            <img src="./images/gallery2.jpg" alt="Michael Chen">
+                            <div>
+                                <h4>Michael Chen</h4>
+                                <span>Business Executive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-content">
+                        <div class="rating">★★★★★</div>
+                        <p>"The attention to detail and personalized service exceeded all expectations. We'll definitely be returning next year!"</p>
+                        <div class="testimonial-author">
+                            <img src="./images/gallery3.jpg" alt="Emma Rodriguez">
+                            <div>
+                                <h4>Emma Rodriguez</h4>
+                                <span>Fashion Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <div id="footer-placeholder"> </div>
+
+    <!-- Scripts -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-    AOS.init();
-    </script>
+    <script src="./main.js"></script>
 </body>
 </html>

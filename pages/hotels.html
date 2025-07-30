@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels - EL Ahram Travels</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./pages.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header class="page-header">
+        <div class="page-header-content">
+            <div class="page-logo">
+                <a href="../index.html">
+                    <p class="banner_logo_text">EL Ahram</p>
+                    <p class="banner_logo_text">Travels</p>
+                </a>
+            </div>
+            <nav class="page-nav">
+                <ul class="page-nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./rooms.html">Rooms</a></li>
+                    <li class="auth-active"><a href="./hotels.html">Hotels</a></li>
+                    <li><a href="../index.html#gallery">Gallery</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="./login.html">Login</a></li>
+                    <li><a href="./register.html">Register</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <div class="mobile-logo">
+                    <p>EL Ahram</p>
+                    <p>Travels</p>
+                </div>
+                <button class="close-menu" id="closeMenu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <ul class="mobile-nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./rooms.html">Rooms</a></li>
+                    <li><a href="./hotels.html">Hotels</a></li>
+                    <li><a href="../index.html#gallery">Gallery</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="./login.html">Login</a></li>
+                    <li><a href="./register.html">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hotel Search Section -->
+    <section class="hotels-search">
+        <div class="search-container">
+            <h1 data-aos="fade-up">Find Your Perfect Stay</h1>
+            <p data-aos="fade-up" data-aos-delay="200">Discover exceptional hotels and accommodations worldwide with exclusive member rates</p>
+            
+            <form class="search-form" id="hotelSearchForm" data-aos="fade-up" data-aos-delay="400">
+                <div class="search-group">
+                    <label for="destination">Destination</label>
+                    <input type="text" id="destination" name="destination" placeholder="Where are you going?" required>
+                </div>
+                
+                <div class="search-group">
+                    <label for="checkin">Check-in</label>
+                    <input type="date" id="checkin" name="checkin" required>
+                </div>
+                
+                <div class="search-group">
+                    <label for="checkout">Check-out</label>
+                    <input type="date" id="checkout" name="checkout" required>
+                </div>
+                
+                <div class="search-group">
+                    <label for="guests">Guests</label>
+                    <select id="guests" name="guests" required>
+                        <option value="1">1 Guest</option>
+                        <option value="2">2 Guests</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4">4 Guests</option>
+                        <option value="5">5+ Guests</option>
+                    </select>
+                </div>
+                
+                <div class="search-group">
+                    <label for="rooms">Rooms</label>
+                    <select id="rooms" name="rooms" required>
+                        <option value="1">1 Room</option>
+                        <option value="2">2 Rooms</option>
+                        <option value="3">3 Rooms</option>
+                        <option value="4">4+ Rooms</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="search-btn">
+                    <i class="fas fa-search"></i>
+                    Search Hotels
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="hotels-filters">
+        <div class="filters-container">
+            <div class="filter-group">
+                <label>Price Range</label>
+                <select id="priceRange">
+                    <option value="">Any Price</option>
+                    <option value="0-100">$0 - $100</option>
+                    <option value="100-200">$100 - $200</option>
+                    <option value="200-400">$200 - $400</option>
+                    <option value="400+">$400+</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label>Star Rating</label>
+                <select id="starRating">
+                    <option value="">Any Rating</option>
+                    <option value="5">5 Stars</option>
+                    <option value="4">4+ Stars</option>
+                    <option value="3">3+ Stars</option>
+                    <option value="2">2+ Stars</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label>Hotel Type</label>
+                <select id="hotelType">
+                    <option value="">All Types</option>
+                    <option value="hotel">Hotel</option>
+                    <option value="resort">Resort</option>
+                    <option value="villa">Villa</option>
+                    <option value="apartment">Apartment</option>
+                    <option value="boutique">Boutique Hotel</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label>Amenities</label>
+                <select id="amenities">
+                    <option value="">All Amenities</option>
+                    <option value="wifi">Free WiFi</option>
+                    <option value="pool">Swimming Pool</option>
+                    <option value="spa">Spa</option>
+                    <option value="gym">Fitness Center</option>
+                    <option value="restaurant">Restaurant</option>
+                </select>
+            </div>
+            
+            <button class="filter-btn" id="applyFilters">Apply Filters</button>
+            <button class="filter-btn" id="clearFilters" style="background: #6c757d;">Clear All</button>
+        </div>
+    </section>
+
+    <!-- Search Results Section -->
+    <section class="hotels-results">
+        <div class="results-header">
+            <div class="results-count">
+                <span id="resultsCount">28 hotels found</span> in <span id="searchLocation">Greek Islands</span>
+            </div>
+            <div class="sort-options">
+                <label for="sortBy">Sort by:</label>
+                <select id="sortBy">
+                    <option value="recommended">Recommended</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="rating">Guest Rating</option>
+                    <option value="distance">Distance</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="hotels-list" id="hotelsList">
+            <!-- Hotel Item 1 -->
+            <div class="hotel-item" data-aos="fade-up" data-price="450" data-rating="5" data-type="resort">
+                <div class="hotel-image">
+                    <img src="../images/room1.jpg" alt="Aegean Paradise Resort">
+                    <div class="hotel-badge">Best Value</div>
+                </div>
+                <div class="hotel-details">
+                    <div class="hotel-header">
+                        <h2 class="hotel-name">Aegean Paradise Resort</h2>
+                        <div class="hotel-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Santorini, Greece</span>
+                        </div>
+                        <div class="hotel-rating">
+                            <div class="hotel-stars">★★★★★</div>
+                            <div class="hotel-score">9.2</div>
+                            <span>(247 reviews)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hotel-amenities">
+                        <div class="amenity"><i class="fas fa-wifi"></i> Free WiFi</div>
+                        <div class="amenity"><i class="fas fa-swimming-pool"></i> Pool</div>
+                        <div class="amenity"><i class="fas fa-spa"></i> Spa</div>
+                        <div class="amenity"><i class="fas fa-utensils"></i> Restaurant</div>
+                    </div>
+                    
+                    <div class="hotel-footer">
+                        <div class="hotel-price">
+                            <div class="price-amount">$450</div>
+                            <div class="price-unit">per night</div>
+                            <div class="price-note">includes taxes & fees</div>
+                        </div>
+                        <button class="book-btn">Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hotel Item 2 -->
+            <div class="hotel-item" data-aos="fade-up" data-aos-delay="100" data-price="320" data-rating="4" data-type="hotel">
+                <div class="hotel-image">
+                    <img src="../images/room2.jpg" alt="Mykonos Bay Hotel">
+                    <div class="hotel-badge">Popular</div>
+                </div>
+                <div class="hotel-details">
+                    <div class="hotel-header">
+                        <h2 class="hotel-name">Mykonos Bay Hotel</h2>
+                        <div class="hotel-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Mykonos, Greece</span>
+                        </div>
+                        <div class="hotel-rating">
+                            <div class="hotel-stars">★★★★☆</div>
+                            <div class="hotel-score">8.8</div>
+                            <span>(189 reviews)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hotel-amenities">
+                        <div class="amenity"><i class="fas fa-wifi"></i> Free WiFi</div>
+                        <div class="amenity"><i class="fas fa-car"></i> Parking</div>
+                        <div class="amenity"><i class="fas fa-dumbbell"></i> Gym</div>
+                        <div class="amenity"><i class="fas fa-concierge-bell"></i> Concierge</div>
+                    </div>
+                    
+                    <div class="hotel-footer">
+                        <div class="hotel-price">
+                            <div class="price-amount">$320</div>
+                            <div class="price-unit">per night</div>
+                            <div class="price-note">includes taxes & fees</div>
+                        </div>
+                        <button class="book-btn">Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hotel Item 3 -->
+            <div class="hotel-item" data-aos="fade-up" data-aos-delay="200" data-price="280" data-rating="4" data-type="boutique">
+                <div class="hotel-image">
+                    <img src="../images/room3.jpg" alt="Crete Sunset Villa">
+                    <div class="hotel-badge">New</div>
+                </div>
+                <div class="hotel-details">
+                    <div class="hotel-header">
+                        <h2 class="hotel-name">Crete Sunset Villa</h2>
+                        <div class="hotel-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Crete, Greece</span>
+                        </div>
+                        <div class="hotel-rating">
+                            <div class="hotel-stars">★★★★☆</div>
+                            <div class="hotel-score">8.9</div>
+                            <span>(156 reviews)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hotel-amenities">
+                        <div class="amenity"><i class="fas fa-wifi"></i> Free WiFi</div>
+                        <div class="amenity"><i class="fas fa-swimming-pool"></i> Pool</div>
+                        <div class="amenity"><i class="fas fa-mountain"></i> Sea View</div>
+                        <div class="amenity"><i class="fas fa-utensils"></i> Kitchen</div>
+                    </div>
+                    
+                    <div class="hotel-footer">
+                        <div class="hotel-price">
+                            <div class="price-amount">$280</div>
+                            <div class="price-unit">per night</div>
+                            <div class="price-note">includes taxes & fees</div>
+                        </div>
+                        <button class="book-btn">Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hotel Item 4 -->
+            <div class="hotel-item" data-aos="fade-up" data-aos-delay="300" data-price="180" data-rating="3" data-type="hotel">
+                <div class="hotel-image">
+                    <img src="../images/room4.jpg" alt="Rhodes Garden Hotel">
+                </div>
+                <div class="hotel-details">
+                    <div class="hotel-header">
+                        <h2 class="hotel-name">Rhodes Garden Hotel</h2>
+                        <div class="hotel-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Rhodes, Greece</span>
+                        </div>
+                        <div class="hotel-rating">
+                            <div class="hotel-stars">★★★☆☆</div>
+                            <div class="hotel-score">8.2</div>
+                            <span>(98 reviews)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hotel-amenities">
+                        <div class="amenity"><i class="fas fa-wifi"></i> Free WiFi</div>
+                        <div class="amenity"><i class="fas fa-leaf"></i> Garden</div>
+                        <div class="amenity"><i class="fas fa-coffee"></i> Breakfast</div>
+                        <div class="amenity"><i class="fas fa-car"></i> Parking</div>
+                    </div>
+                    
+                    <div class="hotel-footer">
+                        <div class="hotel-price">
+                            <div class="price-amount">$180</div>
+                            <div class="price-unit">per night</div>
+                            <div class="price-note">includes taxes & fees</div>
+                        </div>
+                        <button class="book-btn">Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hotel Item 5 -->
+            <div class="hotel-item" data-aos="fade-up" data-aos-delay="400" data-price="520" data-rating="5" data-type="villa">
+                <div class="hotel-image">
+                    <img src="../images/room5.jpg" alt="Luxury Cyclades Villa">
+                    <div class="hotel-badge">Luxury</div>
+                </div>
+                <div class="hotel-details">
+                    <div class="hotel-header">
+                        <h2 class="hotel-name">Luxury Cyclades Villa</h2>
+                        <div class="hotel-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Paros, Greece</span>
+                        </div>
+                        <div class="hotel-rating">
+                            <div class="hotel-stars">★★★★★</div>
+                            <div class="hotel-score">9.6</div>
+                            <span>(78 reviews)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hotel-amenities">
+                        <div class="amenity"><i class="fas fa-wifi"></i> Free WiFi</div>
+                        <div class="amenity"><i class="fas fa-swimming-pool"></i> Private Pool</div>
+                        <div class="amenity"><i class="fas fa-user-tie"></i> Butler</div>
+                        <div class="amenity"><i class="fas fa-helicopter"></i> Helipad</div>
+                    </div>
+                    
+                    <div class="hotel-footer">
+                        <div class="hotel-price">
+                            <div class="price-amount">$520</div>
+                            <div class="price-unit">per night</div>
+                            <div class="price-note">includes taxes & fees</div>
+                        </div>
+                        <button class="book-btn">Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hotel Item 6 -->
+            <div class="hotel-item" data-aos="fade-up" data-aos-delay="500" data-price="150" data-rating="3" data-type="apartment">
+                <div class="hotel-image">
+                    <img src="../images/room6.jpg" alt="Cozy Athens Apartment">
+                    <div class="hotel-badge">Budget Friendly</div>
+                </div>
+                <div class="hotel-details">
+                    <div class="hotel-header">
+                        <h2 class="hotel-name">Cozy Athens Apartment</h2>
+                        <div class="hotel-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Athens, Greece</span>
+                        </div>
+                        <div class="hotel-rating">
+                            <div class="hotel-stars">★★★☆☆</div>
+                            <div class="hotel-score">8.0</div>
+                            <span>(134 reviews)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hotel-amenities">
+                        <div class="amenity"><i class="fas fa-wifi"></i> Free WiFi</div>
+                        <div class="amenity"><i class="fas fa-utensils"></i> Kitchen</div>
+                        <div class="amenity"><i class="fas fa-washing-machine"></i> Laundry</div>
+                        <div class="amenity"><i class="fas fa-subway"></i> Metro Access</div>
+                    </div>
+                    
+                    <div class="hotel-footer">
+                        <div class="hotel-price">
+                            <div class="price-amount">$150</div>
+                            <div class="price-unit">per night</div>
+                            <div class="price-note">includes taxes & fees</div>
+                        </div>
+                        <button class="book-btn">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="load-more-container" data-aos="fade-up">
+            <button class="load-more-btn" id="loadMoreBtn">
+                <i class="fas fa-plus"></i>
+                Load More Hotels
+            </button>
+            <p class="load-more-text">Showing 6 of 28 hotels</p>
+        </div>
+    </section>
+
+    <!-- Special Offers Section -->
+    <section class="special-offers">
+        <div class="container">
+            <h2 data-aos="fade-up">Special Offers</h2>
+            <p data-aos="fade-up" data-aos-delay="200">Don't miss these exclusive deals on premium accommodations</p>
+            
+            <div class="offers-grid">
+                <div class="offer-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="offer-image">
+                        <img src="../images/gallery1.jpg" alt="Early Bird Special">
+                        <div class="offer-badge">Save 25%</div>
+                    </div>
+                    <div class="offer-content">
+                        <h3>Early Bird Special</h3>
+                        <p>Book 30 days in advance and save up to 25% on your stay at selected Greek island hotels.</p>
+                        <div class="offer-validity">Valid until: March 31, 2025</div>
+                        <button class="offer-btn">View Deals</button>
+                    </div>
+                </div>
+
+                <div class="offer-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="offer-image">
+                        <img src="../images/gallery2.jpg" alt="Extended Stay Discount">
+                        <div class="offer-badge">Save 30%</div>
+                    </div>
+                    <div class="offer-content">
+                        <h3>Extended Stay Discount</h3>
+                        <p>Stay 7 nights or more and enjoy up to 30% off on luxury resorts and villas.</p>
+                        <div class="offer-validity">Valid until: April 15, 2025</div>
+                        <button class="offer-btn">View Deals</button>
+                    </div>
+                </div>
+
+                <div class="offer-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="offer-image">
+                        <img src="../images/gallery3.jpg" alt="Member Exclusive">
+                        <div class="offer-badge">Members Only</div>
+                    </div>
+                    <div class="offer-content">
+                        <h3>Member Exclusive Rates</h3>
+                        <p>Join our membership program and unlock exclusive rates not available to the public.</p>
+                        <div class="offer-validity">Available year-round</div>
+                        <button class="offer-btn">Join Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <p class="sub_logo_text">EL Ahram</p>
+                    <p class="sub_logo_text">Travels</p>
+                </div>
+                <p>Your trusted travel companion for extraordinary adventures around the world.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./rooms.html">Rooms</a></li>
+                    <li><a href="./hotels.html">Hotels</a></li>
+                    <li><a href="../index.html#gallery">Gallery</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+20 101 001 000</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@elahramtravels.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-location-dot"></i>
+                    <span>Cairo, Egypt</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 EL Ahram Travels. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Mobile Menu Functionality
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        const closeMenu = document.getElementById('closeMenu');
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenuOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        }
+
+        if (closeMenu) {
+            closeMenu.addEventListener('click', () => {
+                mobileMenuOverlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        }
+
+        if (mobileMenuOverlay) {
+            mobileMenuOverlay.addEventListener('click', (e) => {
+                if (e.target === mobileMenuOverlay) {
+                    mobileMenuOverlay.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+
+        // Set minimum dates for check-in and check-out
+        const today = new Date().toISOString().split('T')[0];
+        const checkinInput = document.getElementById('checkin');
+        const checkoutInput = document.getElementById('checkout');
+
+        if (checkinInput) {
+            checkinInput.setAttribute('min', today);
+            checkinInput.addEventListener('change', function() {
+                const checkinDate = new Date(this.value);
+                checkinDate.setDate(checkinDate.getDate() + 1);
+                const minCheckout = checkinDate.toISOString().split('T')[0];
+                checkoutInput.setAttribute('min', minCheckout);
+            });
+        }
+
+        if (checkoutInput) {
+            checkoutInput.setAttribute('min', today);
+        }
+
+        // Hotel Search Form Submission
+        const searchForm = document.getElementById('hotelSearchForm');
+        if (searchForm) {
+            searchForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                const formData = new FormData(searchForm);
+                const searchData = Object.fromEntries(formData);
+                
+                // Validate form
+                if (!searchData.destination || !searchData.checkin || !searchData.checkout) {
+                    alert('Please fill in all required fields.');
+                    return;
+                }
+                
+                // Validate dates
+                const checkinDate = new Date(searchData.checkin);
+                const checkoutDate = new Date(searchData.checkout);
+                
+                if (checkoutDate <= checkinDate) {
+                    alert('Check-out date must be after check-in date.');
+                    return;
+                }
+                
+                // Update search location display
+                document.getElementById('searchLocation').textContent = searchData.destination;
+                
+                // Show loading and simulate search
+                showSearchLoading();
+                
+                setTimeout(() => {
+                    hideSearchLoading();
+                    // Scroll to results
+                    document.querySelector('.hotels-results').scrollIntoView({ 
+                        behavior: 'smooth' 
+                    });
+                }, 2000);
+            });
+        }
+
+        // Filter Functionality
+        const applyFiltersBtn = document.getElementById('applyFilters');
+        const clearFiltersBtn = document.getElementById('clearFilters');
+
+        if (applyFiltersBtn) {
+            applyFiltersBtn.addEventListener('click', applyFilters);
+        }
+
+        if (clearFiltersBtn) {
+            clearFiltersBtn.addEventListener('click', clearFilters);
+        }
+
+        function applyFilters() {
+            const priceRange = document.getElementById('priceRange').value;
+            const starRating = document.getElementById('starRating').value;
+            const hotelType = document.getElementById('hotelType').value;
+            const amenities = document.getElementById('amenities').value;
+            
+            const hotelItems = document.querySelectorAll('.hotel-item');
+            let visibleCount = 0;
+            
+            hotelItems.forEach(hotel => {
+                let shouldShow = true;
+                
+                // Price filter
+                if (priceRange) {
+                    const price = parseInt(hotel.dataset.price);
+                    const [min, max] = priceRange.includes('+') 
+                        ? [parseInt(priceRange.replace('+', '')), Infinity]
+                        : priceRange.split('-').map(p => parseInt(p));
+                    
+                    if (price < min || price > max) {
+                        shouldShow = false;
+                    }
+                }
+                
+                // Star rating filter
+                if (starRating && parseInt(hotel.dataset.rating) < parseInt(starRating)) {
+                    shouldShow = false;
+                }
+                
+                // Hotel type filter
+                if (hotelType && hotel.dataset.type !== hotelType) {
+                    shouldShow = false;
+                }
+                
+                // Show/hide hotel
+                if (shouldShow) {
+                    hotel.style.display = 'grid';
+                    visibleCount++;
+                } else {
+                    hotel.style.display = 'none';
+                }
+            });
+            
+            // Update results count
+            document.getElementById('resultsCount').textContent = `${visibleCount} hotels found`;
+            
+            // Show message if no results
+            if (visibleCount === 0) {
+                showNoResultsMessage();
+            } else {
+                hideNoResultsMessage();
+            }
+        }
+
+        function clearFilters() {
+            // Reset all filter dropdowns
+            document.getElementById('priceRange').value = '';
+            document.getElementById('starRating').value = '';
+            document.getElementById('hotelType').value = '';
+            document.getElementById('amenities').value = '';
+            
+            // Show all hotels
+            const hotelItems = document.querySelectorAll('.hotel-item');
+            hotelItems.forEach(hotel => {
+                hotel.style.display = 'grid';
+            });
+            
+            // Update results count
+            document.getElementById('resultsCount').textContent = `${hotelItems.length} hotels found`;
+            hideNoResultsMessage();
+        }
+
+        // Sort Functionality
+        const sortSelect = document.getElementById('sortBy');
+        if (sortSelect) {
+            sortSelect.addEventListener('change', sortHotels);
+        }
+
+        function sortHotels() {
+            const sortBy = document.getElementById('sortBy').value;
+            const hotelsList = document.getElementById('hotelsList');
+            const hotels = Array.from(hotelsList.querySelectorAll('.hotel-item'));
+            
+            hotels.sort((a, b) => {
+                switch (sortBy) {
+                    case 'price-low':
+                        return parseInt(a.dataset.price) - parseInt(b.dataset.price);
+                    case 'price-high':
+                        return parseInt(b.dataset.price) - parseInt(a.dataset.price);
+                    case 'rating':
+                        return parseInt(b.dataset.rating) - parseInt(a.dataset.rating);
+                    default:
+                        return 0; // Keep original order for recommended
+                }
+            });
+            
+            // Re-append sorted hotels
+            hotels.forEach(hotel => hotelsList.appendChild(hotel));
+        }
+
+        // Book Now Functionality
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('book-btn')) {
+                const hotelName = e.target.closest('.hotel-item').querySelector('.hotel-name').textContent;
+                const price = e.target.closest('.hotel-item').querySelector('.price-amount').textContent;
+                
+                if (confirm(`Book ${hotelName} for ${price} per night?`)) {
+                    // Show booking success
+                    alert('Booking confirmed! You will receive a confirmation email shortly.');
+                }
+            }
+        });
+
+        // Load More Functionality
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        if (loadMoreBtn) {
+            loadMoreBtn.addEventListener('click', loadMoreHotels);
+        }
+
+        function loadMoreHotels() {
+            // Simulate loading more hotels
+            loadMoreBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading...';
+            loadMoreBtn.disabled = true;
+            
+            setTimeout(() => {
+                // Reset button
+                loadMoreBtn.innerHTML = '<i class="fas fa-plus"></i> Load More Hotels';
+                loadMoreBtn.disabled = false;
+                
+                // Update text
+                document.querySelector('.load-more-text').textContent = 'Showing 12 of 28 hotels';
+                
+                alert('More hotels loaded! (This is a demo - in a real app, more hotels would be added to the list)');
+            }, 1500);
+        }
+
+        // Helper Functions
+        function showSearchLoading() {
+            const searchBtn = document.querySelector('.search-btn');
+            searchBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Searching...';
+            searchBtn.disabled = true;
+        }
+
+        function hideSearchLoading() {
+            const searchBtn = document.querySelector('.search-btn');
+            searchBtn.innerHTML = '<i class="fas fa-search"></i> Search Hotels';
+            searchBtn.disabled = false;
+        }
+
+        function showNoResultsMessage() {
+            let message = document.getElementById('noResultsMessage');
+            if (!message) {
+                message = document.createElement('div');
+                message.id = 'noResultsMessage';
+                message.className = 'no-results-message';
+                message.innerHTML = `
+                    <div class="no-results-content">
+                        <i class="fas fa-search"></i>
+                        <h3>No hotels found</h3>
+                        <p>Try adjusting your filters or search criteria</p>
+                        <button onclick="clearFilters()" class="clear-filters-btn">Clear Filters</button>
+                    </div>
+                `;
+                document.getElementById('hotelsList').appendChild(message);
+            }
+        }
+
+        function hideNoResultsMessage() {
+            const message = document.getElementById('noResultsMessage');
+            if (message) {
+                message.remove();
+            }
+        }
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.page-header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+    <!-- Additional CSS for special offers and no results message -->
+    <style>
+        .special-offers {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .special-offers h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+            font-weight: 700;
+        }
+
+        .special-offers p {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 60px;
+        }
+
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .offer-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .offer-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .offer-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .offer-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .offer-card:hover .offer-image img {
+            transform: scale(1.05);
+        }
+
+        .offer-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .offer-content {
+            padding: 25px;
+        }
+
+        .offer-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .offer-content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .offer-validity {
+            color: #007bff;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .offer-btn {
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .offer-btn:hover {
+            background: linear-gradient(45deg, #0056b3, #004085);
+            transform: translateY(-2px);
+        }
+
+        .load-more-container {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .load-more-btn {
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+        }
+
+        .load-more-btn:hover {
+            background: linear-gradient(45deg, #0056b3, #004085);
+            transform: translateY(-2px);
+        }
+
+        .load-more-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .load-more-text {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .no-results-message {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .no-results-content i {
+            font-size: 4rem;
+            color: #ddd;
+            margin-bottom: 20px;
+        }
+
+        .no-results-content h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .no-results-content p {
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .clear-filters-btn {
+            background: linear-gradient(45deg, #28a745, #20c997);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .clear-filters-btn:hover {
+            background: linear-gradient(45deg, #20c997, #17a2b8);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .offers-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .special-offers {
+                padding: 60px 15px;
+            }
+        }
+    </style>
+</body>
+</html>
