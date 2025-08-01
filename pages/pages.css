@@ -583,39 +583,6 @@
     color: #ccc;
 }
 
-/* Rooms Page Specific */
-.rooms-hero {
-    height: 60vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                url('../images/room1.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    margin-top: 80px;
-}
-
-.rooms-hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    font-weight: 700;
-}
-
-.rooms-hero-content p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto;
-    opacity: 0.9;
-}
-
-.rooms-filters {
-    padding: 40px 20px;
-    background: white;
-    border-bottom: 1px solid #e0e0e0;
-}
 
 .filters-container {
     max-width: 1200px;
@@ -686,11 +653,23 @@
 /* Hotels Page Specific */
 .hotels-search {
     padding: 120px 20px 80px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: white;
     text-align: center;
 }
 
+/*     display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative; */
 .search-container {
     max-width: 800px;
     margin: 0 auto;

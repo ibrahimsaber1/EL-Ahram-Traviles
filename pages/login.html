@@ -10,55 +10,8 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-    <!-- Header -->
-    <header class="page-header">
-        <div class="page-header-content">
-            <div class="page-logo">
-                <a href="../index.html">
-                    <p class="banner_logo_text">EL Ahram</p>
-                    <p class="banner_logo_text">Travels</p>
-                </a>
-            </div>
-            <nav class="page-nav">
-                <ul class="page-nav-links">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="./rooms.html">Rooms</a></li>
-                    <li><a href="./hotels.html">Hotels</a></li>
-                    <li><a href="../index.html#gallery">Gallery</a></li>
-                    <li><a href="../index.html#about">About</a></li>
-                    <li class="auth-active"><a href="./register.html">Register</a></li>
-                </ul>
-            </nav>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </header>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
-        <div class="mobile-menu">
-            <div class="mobile-menu-header">
-                <div class="mobile-logo">
-                    <p>EL Ahram</p>
-                    <p>Travels</p>
-                </div>
-                <button class="close-menu" id="closeMenu">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <nav class="mobile-nav">
-                <ul class="mobile-nav-links">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="./rooms.html">Rooms</a></li>
-                    <li><a href="./hotels.html">Hotels</a></li>
-                    <li><a href="../index.html#gallery">Gallery</a></li>
-                    <li><a href="../index.html#about">About</a></li>
-                    <li><a href="./register.html">Register</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
 
     <!-- Login Section -->
     <section class="auth-section">
@@ -190,212 +143,124 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="page-footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <div class="footer-logo">
-                    <p class="sub_logo_text">EL Ahram</p>
-                    <p class="sub_logo_text">Travels</p>
-                </div>
-                <p>Your trusted travel companion for extraordinary adventures around the world.</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="./rooms.html">Rooms</a></li>
-                    <li><a href="./hotels.html">Hotels</a></li>
-                    <li><a href="../index.html#gallery">Gallery</a></li>
-                    <li><a href="../index.html#about">About</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Contact Info</h3>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <span>+20 101 001 000</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>info@elahramtravels.com</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-location-dot"></i>
-                    <span>Cairo, Egypt</span>
-                </div>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2025 EL Ahram Travels. All rights reserved.</p>
-        </div>
-    </footer>
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="../common.js"></script>
     <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 1000,
-            once: true,
-            offset: 100
-        });
+        // Login page specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Password Toggle
+            const passwordToggle = document.getElementById('passwordToggle');
+            const passwordInput = document.getElementById('password');
 
-        // Mobile Menu Functionality
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
-        const closeMenu = document.getElementById('closeMenu');
-
-        if (mobileMenuBtn) {
-            mobileMenuBtn.addEventListener('click', () => {
-                mobileMenuOverlay.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            });
-        }
-
-        if (closeMenu) {
-            closeMenu.addEventListener('click', () => {
-                mobileMenuOverlay.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            });
-        }
-
-        if (mobileMenuOverlay) {
-            mobileMenuOverlay.addEventListener('click', (e) => {
-                if (e.target === mobileMenuOverlay) {
-                    mobileMenuOverlay.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                }
-            });
-        }
-
-        // Password Toggle
-        const passwordToggle = document.getElementById('passwordToggle');
-        const passwordInput = document.getElementById('password');
-
-        if (passwordToggle && passwordInput) {
-            passwordToggle.addEventListener('click', () => {
-                const type = passwordInput.type === 'password' ? 'text' : 'password';
-                passwordInput.type = type;
-                
-                const icon = passwordToggle.querySelector('i');
-                icon.classList.toggle('fa-eye');
-                icon.classList.toggle('fa-eye-slash');
-            });
-        }
-
-        // Login Form Submission
-        const loginForm = document.getElementById('loginForm');
-        if (loginForm) {
-            loginForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                
-                const email = document.getElementById('email').value;
-                const password = document.getElementById('password').value;
-                const rememberMe = document.getElementById('rememberMe').checked;
-                
-                // Basic validation
-                if (!email || !password) {
-                    alert('Please fill in all required fields.');
-                    return;
-                }
-                
-                if (!isValidEmail(email)) {
-                    alert('Please enter a valid email address.');
-                    return;
-                }
-                
-                // Show loading state
-                const submitBtn = loginForm.querySelector('.auth-btn');
-                const originalText = submitBtn.innerHTML;
-                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Signing In...';
-                submitBtn.disabled = true;
-                
-                // Simulate login process
-                setTimeout(() => {
-                    alert('Login successful! Welcome back to EL Ahram Travels.');
+            if (passwordToggle && passwordInput) {
+                passwordToggle.addEventListener('click', () => {
+                    const type = passwordInput.type === 'password' ? 'text' : 'password';
+                    passwordInput.type = type;
                     
-                    // Reset button
-                    submitBtn.innerHTML = originalText;
-                    submitBtn.disabled = false;
-                    
-                    // Redirect to home page
-                    window.location.href = '../index.html';
-                }, 2000);
-            });
-        }
-
-        // Social Login Buttons
-        const googleBtn = document.querySelector('.google-btn');
-        const facebookBtn = document.querySelector('.facebook-btn');
-
-        if (googleBtn) {
-            googleBtn.addEventListener('click', () => {
-                alert('Google login would be implemented here');
-            });
-        }
-
-        if (facebookBtn) {
-            facebookBtn.addEventListener('click', () => {
-                alert('Facebook login would be implemented here');
-            });
-        }
-
-        // Email validation function
-        function isValidEmail(email) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailRegex.test(email);
-        }
-
-        // Form field animations
-        const inputs = document.querySelectorAll('.input-wrapper input');
-        inputs.forEach(input => {
-            input.addEventListener('focus', () => {
-                input.parentElement.classList.add('focused');
-            });
-            
-            input.addEventListener('blur', () => {
-                if (!input.value) {
-                    input.parentElement.classList.remove('focused');
-                }
-            });
-            
-            // Check if input has value on page load
-            if (input.value) {
-                input.parentElement.classList.add('focused');
+                    const icon = passwordToggle.querySelector('i');
+                    icon.classList.toggle('fa-eye');
+                    icon.classList.toggle('fa-eye-slash');
+                });
             }
-        });
 
-        // Forgot password functionality
-        const forgotPasswordLink = document.querySelector('.forgot-password');
-        if (forgotPasswordLink) {
-            forgotPasswordLink.addEventListener('click', (e) => {
-                e.preventDefault();
-                const email = prompt('Please enter your email address to reset your password:');
-                if (email && isValidEmail(email)) {
-                    alert('Password reset instructions have been sent to your email address.');
-                } else if (email) {
-                    alert('Please enter a valid email address.');
+            // Login Form Submission
+            const loginForm = document.getElementById('loginForm');
+            if (loginForm) {
+                loginForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    
+                    const email = document.getElementById('email').value;
+                    const password = document.getElementById('password').value;
+                    const rememberMe = document.getElementById('rememberMe').checked;
+                    
+                    // Basic validation
+                    if (!email || !password) {
+                        alert('Please fill in all required fields.');
+                        return;
+                    }
+                    
+                    if (!isValidEmail(email)) {
+                        alert('Please enter a valid email address.');
+                        return;
+                    }
+                    
+                    // Show loading state
+                    const submitBtn = loginForm.querySelector('.auth-btn');
+                    const originalText = submitBtn.innerHTML;
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Signing In...';
+                    submitBtn.disabled = true;
+                    
+                    // Simulate login process
+                    setTimeout(() => {
+                        alert('Login successful! Welcome back to EL Ahram Travels.');
+                        
+                        // Reset button
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                        
+                        // Redirect to home page
+                        window.location.href = '../index.html';
+                    }, 2000);
+                });
+            }
+
+            // Social Login Buttons
+            const googleBtn = document.querySelector('.google-btn');
+            const facebookBtn = document.querySelector('.facebook-btn');
+
+            if (googleBtn) {
+                googleBtn.addEventListener('click', () => {
+                    alert('Google login would be implemented here');
+                });
+            }
+
+            if (facebookBtn) {
+                facebookBtn.addEventListener('click', () => {
+                    alert('Facebook login would be implemented here');
+                });
+            }
+
+            // Email validation function
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+
+            // Form field animations
+            const inputs = document.querySelectorAll('.input-wrapper input');
+            inputs.forEach(input => {
+                input.addEventListener('focus', () => {
+                    input.parentElement.classList.add('focused');
+                });
+                
+                input.addEventListener('blur', () => {
+                    if (!input.value) {
+                        input.parentElement.classList.remove('focused');
+                    }
+                });
+                
+                // Check if input has value on page load
+                if (input.value) {
+                    input.parentElement.classList.add('focused');
                 }
             });
-        }
 
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('.page-header');
-            if (window.scrollY > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
+            // Forgot password functionality
+            const forgotPasswordLink = document.querySelector('.forgot-password');
+            if (forgotPasswordLink) {
+                forgotPasswordLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const email = prompt('Please enter your email address to reset your password:');
+                    if (email && isValidEmail(email)) {
+                        alert('Password reset instructions have been sent to your email address.');
+                    } else if (email) {
+                        alert('Please enter a valid email address.');
+                    }
+                });
             }
         });
     </script>

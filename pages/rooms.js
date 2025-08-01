@@ -5,6 +5,20 @@ AOS.init({
     offset: 100
 });
 
+fetch('./footer.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('footer-placeholder').innerHTML = data;
+    console.log(`found this footer: ${data}`);
+  });
+
+fetch('./header.html')
+    .then(res => res.text())
+    .then(data => {
+    document.getElementById('header-placeholder').innerHTML = data;
+    console.log(`found this header: ${data}`);
+    });
+
 // Mobile Menu Functionality
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');

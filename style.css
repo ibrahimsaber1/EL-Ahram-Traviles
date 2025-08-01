@@ -49,11 +49,11 @@ body {
     top: 0;
     z-index: 1000;
     transition: all 0.3s ease;
-    background: transparent;
+    background: rgb(86, 154, 194,0.7);
 }
 
 .banner_header.scrolled {
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(109, 109, 109, 0.95);
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
