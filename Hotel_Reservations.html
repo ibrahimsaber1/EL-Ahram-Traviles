@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Reservations - EL Ahram Travels</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../pages/pages.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hotel Reservations Hero Section -->
+    <section class="service-hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1 data-aos="fade-up">Hotel Reservations</h1>
+                <p data-aos="fade-up" data-aos-delay="200">Book your perfect accommodation with our extensive network of premium hotels worldwide. From luxury resorts to boutique properties.</p>
+                <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat">
+                        <h3>50,000+</h3>
+                        <p>Hotels Worldwide</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Best</h3>
+                        <p>Rate Guarantee</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Free</h3>
+                        <p>Cancellation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hotel Search Section -->
+    <section class="service-search">
+        <div class="container">
+            <h2 data-aos="fade-up">Find Your Perfect Hotel</h2>
+            <div class="search-form-container" data-aos="fade-up" data-aos-delay="200">
+                <form class="hotel-search-form" id="hotelSearchForm">
+                    <div class="search-fields">
+                        <div class="field-group destination-field">
+                            <label>Destination</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <input type="text" placeholder="Where are you going?" required>
+                            </div>
+                        </div>
+
+                        <div class="field-group">
+                            <label>Check-in Date</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-calendar-check"></i>
+                                <input type="date" required>
+                            </div>
+                        </div>
+
+                        <div class="field-group">
+                            <label>Check-out Date</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-calendar-times"></i>
+                                <input type="date" required>
+                            </div>
+                        </div>
+
+                        <div class="field-group">
+                            <label>Guests</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-users"></i>
+                                <select>
+                                    <option>1 Guest</option>
+                                    <option>2 Guests</option>
+                                    <option>3 Guests</option>
+                                    <option>4 Guests</option>
+                                    <option>5+ Guests</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="field-group">
+                            <label>Rooms</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-bed"></i>
+                                <select>
+                                    <option>1 Room</option>
+                                    <option>2 Rooms</option>
+                                    <option>3 Rooms</option>
+                                    <option>4+ Rooms</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-filters">
+                        <div class="filter-group">
+                            <label>Hotel Category</label>
+                            <select>
+                                <option value="">All Categories</option>
+                                <option value="luxury">Luxury (5 Star)</option>
+                                <option value="premium">Premium (4 Star)</option>
+                                <option value="comfort">Comfort (3 Star)</option>
+                                <option value="budget">Budget (2 Star)</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label>Price Range</label>
+                            <select>
+                                <option value="">Any Price</option>
+                                <option value="0-100">$0 - $100</option>
+                                <option value="100-250">$100 - $250</option>
+                                <option value="250-500">$250 - $500</option>
+                                <option value="500+">$500+</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label>Amenities</label>
+                            <select>
+                                <option value="">All Amenities</option>
+                                <option value="pool">Swimming Pool</option>
+                                <option value="spa">Spa & Wellness</option>
+                                <option value="gym">Fitness Center</option>
+                                <option value="restaurant">Restaurant</option>
+                                <option value="wifi">Free WiFi</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="search-hotels-btn">
+                        <i class="fas fa-search"></i>
+                        Search Hotels
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hotel Categories -->
+    <section class="hotel-categories">
+        <div class="container">
+            <h2 data-aos="fade-up">Hotel Categories</h2>
+            <div class="categories-grid">
+                <div class="category-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Premium Hotels</h3>
+                    <p>4-star accommodations combining comfort with excellent amenities</p>
+                    <ul>
+                        <li>Room service</li>
+                        <li>Fitness center</li>
+                        <li>Business facilities</li>
+                        <li>Swimming pool</li>
+                    </ul>
+                    <button class="category-btn">Explore Premium</button>
+                </div>
+
+                <div class="category-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Boutique Hotels</h3>
+                    <p>Unique properties with distinctive character and personalized service</p>
+                    <ul>
+                        <li>Unique design</li>
+                        <li>Local experiences</li>
+                        <li>Personalized service</li>
+                        <li>Cultural immersion</li>
+                    </ul>
+                    <button class="category-btn">Explore Boutique</button>
+                </div>
+
+                <div class="category-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="category-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Business Hotels</h3>
+                    <p>Perfect for corporate travelers with modern business amenities</p>
+                    <ul>
+                        <li>Conference rooms</li>
+                        <li>High-speed internet</li>
+                        <li>Airport transfers</li>
+                        <li>24/7 business center</li>
+                    </ul>
+                    <button class="category-btn">Explore Business</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Features -->
+    <section class="service-features">
+        <div class="container">
+            <h2 data-aos="fade-up">Why Book Hotels With Us?</h2>
+            <div class="features-grid">
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3>Best Rate Guarantee</h3>
+                    <p>We guarantee the lowest rates. If you find a better price, we'll match it and give you an additional discount.</p>
+                </div>
+
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-times-circle"></i>
+                    </div>
+                    <h3>Free Cancellation</h3>
+                    <p>Most hotels offer free cancellation up to 24-48 hours before check-in. Change your plans worry-free.</p>
+                </div>
+
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Quality Assured</h3>
+                    <p>All our partner hotels are carefully selected and regularly audited to ensure the highest quality standards.</p>
+                </div>
+
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Our customer service team is available round the clock to assist with bookings and resolve any issues.</p>
+                </div>
+
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Instant Confirmation</h3>
+                    <p>Get immediate booking confirmation via email and SMS. No waiting, no uncertainty.</p>
+                </div>
+
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Exclusive Perks</h3>
+                    <p>Enjoy special amenities like room upgrades, late check-out, and welcome gifts at selected properties.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Hotels -->
+    <section class="featured-hotels">
+        <div class="container">
+            <h2 data-aos="fade-up">Featured Hotels</h2>
+            <div class="hotels-grid">
+                <div class="hotel-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="../images/room1.jpg" alt="Grand Resort Santorini">
+                    <div class="hotel-info">
+                        <div class="hotel-header">
+                            <h3>Grand Resort Santorini</h3>
+                            <div class="hotel-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-score">4.8</span>
+                            </div>
+                        </div>
+                        <p class="hotel-location"><i class="fas fa-map-marker-alt"></i> Santorini, Greece</p>
+                        <div class="hotel-amenities">
+                            <span><i class="fas fa-swimming-pool"></i> Pool</span>
+                            <span><i class="fas fa-spa"></i> Spa</span>
+                            <span><i class="fas fa-wifi"></i> WiFi</span>
+                        </div>
+                        <div class="hotel-pricing">
+                            <span class="price">From $320/night</span>
+                            <button class="book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hotel-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="../images/room2.jpg" alt="Mykonos Luxury Suites">
+                    <div class="hotel-info">
+                        <div class="hotel-header">
+                            <h3>Mykonos Luxury Suites</h3>
+                            <div class="hotel-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-score">4.9</span>
+                            </div>
+                        </div>
+                        <p class="hotel-location"><i class="fas fa-map-marker-alt"></i> Mykonos, Greece</p>
+                        <div class="hotel-amenities">
+                            <span><i class="fas fa-utensils"></i> Restaurant</span>
+                            <span><i class="fas fa-car"></i> Parking</span>
+                            <span><i class="fas fa-concierge-bell"></i> Concierge</span>
+                        </div>
+                        <div class="hotel-pricing">
+                            <span class="price">From $280/night</span>
+                            <button class="book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hotel-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="../images/room3.jpg" alt="Crete Beachfront Resort">
+                    <div class="hotel-info">
+                        <div class="hotel-header">
+                            <h3>Crete Beachfront Resort</h3>
+                            <div class="hotel-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-score">4.6</span>
+                            </div>
+                        </div>
+                        <p class="hotel-location"><i class="fas fa-map-marker-alt"></i> Crete, Greece</p>
+                        <div class="hotel-amenities">
+                            <span><i class="fas fa-umbrella-beach"></i> Beach</span>
+                            <span><i class="fas fa-dumbbell"></i> Gym</span>
+                            <span><i class="fas fa-child"></i> Kids Club</span>
+                        </div>
+                        <div class="hotel-pricing">
+                            <span class="price">From $180/night</span>
+                            <button class="book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="service-cta">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Ready to Book Your Perfect Stay?</h2>
+                <p>Discover amazing hotels worldwide with unbeatable prices and exclusive benefits.</p>
+                <div class="cta-buttons">
+                    <button class="cta-primary">Search Hotels</button>
+                    <button class="cta-secondary">View All Hotels</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="../Common.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Form submission
+        document.getElementById('hotelSearchForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Hotel search functionality would be implemented here. Results would show available hotels.');
+        });
+
+        // Set minimum date to today
+        const today = new Date().toISOString().split('T')[0];
+        document.querySelectorAll('input[type="date"]').forEach(input => {
+            input.setAttribute('min', today);
+        });
+
+        // Update checkout minimum date when checkin changes
+        const checkinInput = document.querySelector('input[type="date"]');
+        const checkoutInput = document.querySelectorAll('input[type="date"]')[1];
+        
+        if (checkinInput && checkoutInput) {
+            checkinInput.addEventListener('change', function() {
+                const checkinDate = new Date(this.value);
+                checkinDate.setDate(checkinDate.getDate() + 1);
+                const minCheckout = checkinDate.toISOString().split('T')[0];
+                checkoutInput.setAttribute('min', minCheckout);
+            });
+        }
+    </script>
+
+    <style>
+        .service-hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), 
+                        url('../images/room1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            margin-top: 80px;
+            position: relative;
+        }
+
+        .hero-overlay {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: white;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 60px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat h3 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            color: #ffd700;
+        }
+
+        .stat p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .service-search {
+            padding: 80px 20px;
+            background: #f8f9fa;
+        }
+
+        .service-search h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #333;
+            font-weight: 700;
+        }
+
+        .search-form-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-fields {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .destination-field {
+            grid-column: span 2;
+        }
+
+        .field-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .field-group label {
+            font-weight: 600;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .input-with-icon {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .input-with-icon i {
+            position: absolute;
+            left: 15px;
+            color: #007bff;
+            z-index: 1;
+        }
+
+        .input-with-icon input,
+        .input-with-icon select {
+            width: 100%;
+            height: 50px;
+            padding: 0 15px 0 45px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .input-with-icon input:focus,
+        .input-with-icon select:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+        }
+
+        .search-filters {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .filter-group label {
+            font-weight: 600;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .filter-group select {
+            height: 45px;
+            padding: 0 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .filter-group select:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+        }
+
+        .search-hotels-btn {
+            width: 100%;
+            height: 55px;
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .search-hotels-btn:hover {
+            background: linear-gradient(45deg, #0056b3, #004085);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+        }
+
+        .hotel-categories {
+            padding: 100px 20px;
+            background: white;
+        }
+
+        .hotel-categories h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: #333;
+            font-weight: 700;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-card {
+            background: #f8f9fa;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .category-card:hover {
+            background: white;
+            border-color: #007bff;
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 123, 255, 0.15);
+        }
+
+        .category-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            transition: transform 0.3s ease;
+        }
+
+        .category-card:hover .category-icon {
+            transform: scale(1.1);
+        }
+
+        .category-icon i {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .category-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .category-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .category-card ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+
+        .category-card li {
+            color: #666;
+            padding: 5px 0;
+            font-size: 0.9rem;
+        }
+
+        .category-card li:before {
+            content: "✓";
+            color: #007bff;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .category-btn {
+            background: linear-gradient(45deg, #28a745, #20c997);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .category-btn:hover {
+            background: linear-gradient(45deg, #20c997, #17a2b8);
+            transform: translateY(-2px);
+        }
+
+        .service-features {
+            padding: 100px 20px;
+            background: #f8f9fa;
+        }
+
+        .service-features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: #333;
+            font-weight: 700;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 40px 30px;
+            background: white;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover .feature-icon {
+            transform: scale(1.1);
+        }
+
+        .feature-icon i {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .feature-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .feature-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .featured-hotels {
+            padding: 100px 20px;
+            background: white;
+        }
+
+        .featured-hotels h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: #333;
+            font-weight: 700;
+        }
+
+        .hotels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hotel-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .hotel-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .hotel-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .hotel-info {
+            padding: 25px;
+        }
+
+        .hotel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .hotel-header h3 {
+            font-size: 1.3rem;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .hotel-rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .stars {
+            color: #ffd700;
+            font-size: 1rem;
+        }
+
+        .rating-score {
+            background: #007bff;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .hotel-location {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .hotel-location i {
+            margin-right: 5px;
+        }
+
+        .hotel-amenities {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .hotel-amenities span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #666;
+            font-size: 0.85rem;
+            background: #f8f9fa;
+            padding: 5px 10px;
+            border-radius: 12px;
+        }
+
+        .hotel-amenities i {
+            color: #007bff;
+        }
+
+        .hotel-pricing {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            font-size: 1.3rem;
+            color: #007bff;
+            font-weight: 700;
+        }
+
+        .book-btn {
+            background: linear-gradient(45deg, #28a745, #20c997);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .book-btn:hover {
+            background: linear-gradient(45deg, #20c997, #17a2b8);
+            transform: translateY(-2px);
+        }
+
+        .service-cta {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .cta-content p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 40px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-primary,
+        .cta-secondary {
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-primary {
+            background: linear-gradient(45deg, #28a745, #20c997);
+            color: white;
+        }
+
+        .cta-primary:hover {
+            background: linear-gradient(45deg, #20c997, #17a2b8);
+            transform: translateY(-3px);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .cta-secondary:hover {
+            background: white;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .search-fields {
+                grid-template-columns: 1fr;
+            }
+
+            .destination-field {
+                grid-column: span 1;
+            }
+
+            .search-filters {
+                grid-template-columns: 1fr;
+            }
+
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hotels-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hotel-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .hotel-pricing {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+
+            .book-btn {
+                align-self: stretch;
+                text-align: center;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-primary,
+            .cta-secondary {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</body>
+</html>
