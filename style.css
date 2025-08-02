@@ -1211,7 +1211,7 @@ body {
 .footer-content {
     padding: 80px 5% 40px;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    /* grid-template-columns: 2fr 1fr 1fr 1.5fr; */
     gap: 60px;
 }
 
@@ -1359,7 +1359,7 @@ body {
     }
     
     .footer-content {
-        grid-template-columns: 1fr 1fr;
+        /* grid-template-columns: 1fr 1fr; */
         gap: 40px;
     }
 }
